@@ -1080,8 +1080,8 @@
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
     <widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="background20" transparent="1" />
-    <widget name="config" position="70,130" size="605,353" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transparent" />
-    <widget source="help" render="Label" position="70,503" size="605,88" font="Regular;20" foregroundColor="white" backgroundColor="transparent" />
+    <widget name="config" position="70,130" size="605,353" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" />
+    <widget source="help" render="Label" position="70,503" size="605,88" font="Regular;20" foregroundColor="white" backgroundColor="background20" transparent="1" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/red.png" position=" 70,635" size="30,40" alphatest="blend" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/green.png" position="360,635" size="30,40" alphatest="blend" />
     <widget name="key_red" render="Label" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" backgroundColor="background20" transparent="1" />
