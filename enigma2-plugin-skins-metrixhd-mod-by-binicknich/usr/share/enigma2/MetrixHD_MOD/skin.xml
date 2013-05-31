@@ -1334,6 +1334,50 @@
     <widget name="key_green" render="Label" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" backgroundColor="background20" transparent="1" />
     <ePixmap position="920,230" size="256,256" zPosition="2" pixmap="MetrixHD_MOD/icons/setup.png" transparent="1" />
   </screen>
+	<screen name="mediaInfoSetup" position="0,0" size="1280,720" title="MediaInfo Setup" flags="wfNoBorder" backgroundColor="background90">
+	  <eLabel name="new eLabel" position="40,25" zPosition="-10" size="1205,650" backgroundColor="background20" transparent="0" />
+	  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="background20" transparent="1">
+	    <convert type="ClockToText">Default</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="background20" transparent="1">
+	    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+	  </widget>
+	  <widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="background20" transparent="1" />
+		<widget name="config" position="70,115" size="700,450" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" />
+  	<eLabel position="70,572" size="700,2" backgroundColor="grey" />
+  	<widget source="help" render="Label" position="70,577" size="700,50" font="Regular;20" backgroundColor="background20" transparent="1" />
+	  <ePixmap pixmap="MetrixHD_MOD/buttons/red.png" position=" 70,635" size="30,40" alphatest="blend" />
+	  <ePixmap pixmap="MetrixHD_MOD/buttons/green.png" position="360,635" size="30,40" alphatest="blend" />
+	  <eLabel text="Cancel" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
+	  <eLabel text="Save" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
+	  <ePixmap position="920,230" size="256,256" zPosition="2" pixmap="MetrixHD_MOD/icons/setup.png" transparent="1" />
+	</screen>
+	<screen name="mediaInfo" position="0,0" size="1280,720" title="MediaInfo" flags="wfNoBorder" backgroundColor="background90">
+	  <eLabel name="new eLabel" position="40,25" zPosition="-10" size="1205,650" backgroundColor="background20" transparent="0" />
+	  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="background20" transparent="1">
+	    <convert type="ClockToText">Default</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="background20" transparent="1">
+	    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+	  </widget>
+	  <widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="background20" transparent="1" />
+		<widget name="pname" position="70,115" size="1065,30" zPosition="0" font="Regular;22" transparent="1" foregroundColor="white" />
+		<widget name="pinfo" position="70,145" size="1065,30" zPosition="0" font="Regular;22" transparent="1" foregroundColor="white" />
+		<widget name="head" position="70,195" size="1065,25" backgroundColor="#00aaaaaa" zPosition="5" foregroundColor="#00000000" font="Regular;23" halign="center"/>
+		<widget name="dllist" position="70,220" size="1065,420" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" />
+	  <ePixmap pixmap="MetrixHD_MOD/buttons/red.png" position=" 70,635" size="30,40" alphatest="blend" />
+	  <ePixmap pixmap="MetrixHD_MOD/buttons/green.png" position="360,635" size="30,40" alphatest="blend" />
+	  <ePixmap pixmap="MetrixHD_MOD/buttons/yellow.png" position="650,635" size="30,40" alphatest="blend" />
+	  <ePixmap pixmap="MetrixHD_MOD/buttons/blue.png" position="940,635" size="30,40" alphatest="blend" />
+	  <widget source="key_red" render="Label" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
+	  <widget source="key_green" render="Label" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
+	  <widget source="key_yellow" render="Label" position="685,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
+	  <widget source="key_blue" render="Label" position="975,637" size="260,24" zPosition="1" font="RegularLight;20" halign="left" backgroundColor="background20" transparent="1" />
+		<eLabel text="Loeschen" position="105,637" size="240,24" zPosition="1" font="RegularLight;20" halign="left" backgroundColor="background20" transparent="1" />
+		<eLabel text="AddDownload" position="395,637" size="240,24" zPosition="1" font="RegularLight;20" halign="left" backgroundColor="background20" transparent="1" />
+		<eLabel text="Start/Stop Download" position="685,637" size="240,24" zPosition="1" font="RegularLight;20" halign="left" backgroundColor="background20" transparent="1" />
+		<eLabel text="Einstellung" position="975,637" size="240,24" zPosition="1" font="RegularLight;20" halign="left" backgroundColor="background20" transparent="1" />
+	</screen>
   <screen name="BouquetSelector" position="0,0" size="1280,720" title="Choose bouquet" flags="wfNoBorder" backgroundColor="background90">
     <eLabel name="new eLabel" position="40,25" zPosition="-11" size="1205,650" backgroundColor="background20" transparent="0" />
     <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="background20" transparent="1">
