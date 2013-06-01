@@ -7269,6 +7269,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     </widget>
     <widget source="infotext" render="Label" position="70,120" size="700,450" zPosition="1" font="Regular;22" halign="center" valign="center" transparent="1" />
   </screen>
+	<screen name="ThreeDSettings" position="0,0" size="1280,720" title="3D settings" flags="wfNoBorder" backgroundColor="background90">
+	  <eLabel name="new eLabel" position="40,25" zPosition="-10" size="1205,650" backgroundColor="background20" transparent="0" />
+	  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="background20" transparent="1">
+	    <convert type="ClockToText">Default</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="background20" transparent="1">
+	    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+	  </widget>
+	  <widget source="Title" render="Label" position="70,47" size="800,43" font="Regular;35" backgroundColor="background20" transparent="1" />
+  	<widget name="config" position="70,115" size="700,450" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" />
+	  <ePixmap pixmap="MetrixHD_MOD/buttons/red.png" position=" 70,635" size="30,40" alphatest="blend" />
+	  <ePixmap pixmap="MetrixHD_MOD/buttons/green.png" position="360,635" size="30,40" alphatest="blend" />
+	  <ePixmap pixmap="MetrixHD_MOD/buttons/yellow.png" position="650,635" size="30,40" alphatest="blend" />
+	  <ePixmap pixmap="MetrixHD_MOD/buttons/blue.png" position="940,635" size="30,40" alphatest="blend" />
+	  <widget source="red" render="Label" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
+	  <widget source="green" render="Label" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
+	  <widget source="yellow" render="Label" position="685,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
+	  <widget source="blue" render="Label" position="975,637" size="260,24" zPosition="1" font="RegularLight;20" halign="left" backgroundColor="background20" transparent="1" />
+	  <ePixmap position="920,230" size="256,256" zPosition="2" pixmap="MetrixHD_MOD/icons/setup.png" transparent="1" />
+	</screen>
   <screen name="OSD3DSetupScreen" position="0,0" size="1280,720" title="OSD 3D-Setup" flags="wfNoBorder" backgroundColor="background90">
     <eLabel name="new eLabel" position="40,25" zPosition="-10" size="1205,650" backgroundColor="background20" transparent="0" />
     <widget source="Title" render="Label" font="Regular; 35" position="70,47" size="800,43" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="background20" />
