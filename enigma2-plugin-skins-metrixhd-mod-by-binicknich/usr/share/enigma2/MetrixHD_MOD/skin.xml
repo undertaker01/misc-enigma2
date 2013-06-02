@@ -7187,7 +7187,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget name="infos" position="70,530" zPosition="1" size="550,30" font="Regular;20" halign="left" valign="center" transparent="1" />
     <widget name="bouquets" position="70,560" zPosition="1" size="550,30" font="Regular;20" halign="left" valign="center" transparent="1" />
     <widget name="netservers" position="70,590" zPosition="1" size="550,30" font="Regular;20" halign="left" valign="center" transparent="1" />
-    <widget name="config" position="70,120" size="700,371" scrollbarMode="showOnDemand" zPosition="1" backgroundColor="transparent" />
+    <widget name="config" position="70,120" size="700,371" scrollbarMode="showOnDemand" zPosition="1" backgroundColor="background20" transparent="1" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/red.png" position=" 70,635" size="30,40" alphatest="blend" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/green.png" position="360,635" size="30,40" alphatest="blend" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/yellow.png" position="650,635" size="30,40" alphatest="blend" />
