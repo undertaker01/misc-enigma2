@@ -131,6 +131,15 @@ config.plugins.MyMetrixMOD.InfobarTunerInfo = ConfigSelection(default="infobar-t
 				("infobar-tunerinfo-abc", _("3 Tuner")),
 				("infobar-tunerinfo-abcd", _("4 Tuner"))
 				])
+				#ChannelSelection
+config.plugins.MyMetrixMOD.ChannelSelectionFontSize = ConfigSelection(default="channelsel-fontsize-20", choices = [
+				("channelsel-fontsize-20", _("20 Regular")),
+				("channelsel-fontsize-20thin", _("20 Thin")),
+				("channelsel-fontsize-22", _("22 Regular")),
+				("channelsel-fontsize-22thin", _("22 Thin")),
+				("channelsel-fontsize-24", _("24 Regular")),
+				("channelsel-fontsize-24thin", _("24 Thin"))
+				])
 
 #######################################################################
 
@@ -171,7 +180,7 @@ class MyMetrixMOD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("MetrixWeather ID"), config.plugins.MetrixWeather.woeid))
 		list.append(getConfigListEntry(_("Unit"), config.plugins.MetrixWeather.tempUnit))
 		list.append(getConfigListEntry(_("Refresh Interval (min)"), config.plugins.MetrixWeather.refreshInterval))
-		list.append(getConfigListEntry(_("---------------------------------- InfoBar ----------------------------------"), ))
+		list.append(getConfigListEntry(_("-------------------------------- InfoBar ------------------------------------"), ))
 		list.append(getConfigListEntry(_("Weather Widget"), config.plugins.MyMetrixMOD.InfobarWeatherWidget))
 		list.append(getConfigListEntry(_("Channel name"), config.plugins.MyMetrixMOD.InfobarShowChannelname))
 		list.append(getConfigListEntry(_("Show resolution info"), config.plugins.MyMetrixMOD.InfobarResolutionInfo))
@@ -180,6 +189,8 @@ class MyMetrixMOD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("Show Sat Position"), config.plugins.MyMetrixMOD.InfobarSatPosition))
 		list.append(getConfigListEntry(_("Show SNR"), config.plugins.MyMetrixMOD.InfobarSNR))
 		list.append(getConfigListEntry(_("Show tuner info"), config.plugins.MyMetrixMOD.InfobarTunerInfo))
+		list.append(getConfigListEntry(_("---------------------------- ChannelSelection -------------------------------"), ))
+		list.append(getConfigListEntry(_("Extended Description Fontsize"), config.plugins.MyMetrixMOD.ChannelSelectionFontSize))
 
 		ConfigListScreen.__init__(self, list)
 		self["actions"] = ActionMap(["OkCancelActions","DirectionActions", "InputActions", "ColorActions"], {"left": self.keyLeft,"down": self.keyDown,"up": self.keyUp,"right": self.keyRight,"red": self.exit,"yellow": self.reboot, "blue": self.showInfo, "green": self.save,"cancel": self.exit}, -1)
@@ -258,6 +269,13 @@ class MyMetrixMOD(ConfigListScreen, Screen):
 			self.appendSkinFile(self.daten + config.plugins.MyMetrixMOD.InfobarSNR.value + ".xml")
 			#TunerInfo
 			self.appendSkinFile(self.daten + config.plugins.MyMetrixMOD.InfobarTunerInfo.value + ".xml")
+			#Footer
+			self.appendSkinFile(self.daten + "screen-footer.xml")
+			
+			###ChannelSelection
+			self.appendSkinFile(self.daten + "channelsel-header.xml")
+			#FontSize
+			self.appendSkinFile(self.daten + config.plugins.MyMetrixMOD.ChannelSelectionFontSize.value + ".xml")
 			#Footer
 			self.appendSkinFile(self.daten + "screen-footer.xml")
 			
