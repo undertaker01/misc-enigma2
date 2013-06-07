@@ -7841,8 +7841,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget source="help" render="Label" position="70,577" size="700,50" font="Regular;20" backgroundColor="background20" transparent="1" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/red.png" position=" 70,635" size="30,40" alphatest="blend" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/green.png" position="360,635" size="30,40" alphatest="blend" />
-    <eLabel text="Cancel" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
-    <eLabel text="Save" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
+    <widget source="key_red" render="Label" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
+    <widget source="key_green" render="Label" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
     <ePixmap position="920,230" size="256,256" zPosition="2" pixmap="MetrixHD_MOD/icons/setup.png" transparent="1" />
   </screen>
   <screen name="mediaInfo" position="0,0" size="1280,720" title="MediaInfo" flags="wfNoBorder" backgroundColor="background90">
@@ -7866,10 +7866,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget source="key_green" render="Label" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
     <widget source="key_yellow" render="Label" position="685,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
     <widget source="key_blue" render="Label" position="975,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
-    <eLabel text="Loeschen" position="105,637" size="240,24" zPosition="1" font="RegularLight;20" halign="left" backgroundColor="background20" transparent="1" />
-    <eLabel text="AddDownload" position="395,637" size="240,24" zPosition="1" font="RegularLight;20" halign="left" backgroundColor="background20" transparent="1" />
-    <eLabel text="Start/Stop Download" position="685,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
-    <eLabel text="Einstellung" position="975,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
   </screen>
   <screen name="GBAspectRatioSwitchSetup" position="0,0" size="1280,720" title="GBAspectRatioSwitch Setup" flags="wfNoBorder" backgroundColor="background90">
     <eLabel name="new eLabel" position="40,25" zPosition="-10" size="1205,650" backgroundColor="background20" transparent="0" />
