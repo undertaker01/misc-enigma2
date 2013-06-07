@@ -5407,6 +5407,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
   </screen>
+  <screen name="SimpleSummary" title="Simple Summary" position="0,0" size="132,64">
+  	<widget source="parent.Title" render="Label" position="6,0" size="120,64" font="Display;14" halign="center" valign="center" />
+	</screen>
   <screen name="MenuSummary" id="1" position="0,0" size="132,64">
     <widget source="parent.title" render="Label" position="6,0" size="120,32" font="Regular;13" halign="center" valign="center" />
     <widget source="parent.menu" render="Label" position="6,32" size="120,32" font="Regular;14" halign="center" valign="center">
