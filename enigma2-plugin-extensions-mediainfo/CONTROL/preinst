@@ -1,0 +1,17 @@
+#!/bin/sh
+echo "Checking for an older version of MediaInfo in the system..."
+if [ -d /usr/lib/enigma2/python/Plugins/Extensions/mediainfo ]
+then
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/mediainfo > /dev/null 2>&1
+echo "An older version of MediaInfo was found and removed"
+echo "Proceeding to installation..."
+elif [ -d /usr/lib/enigma2/python/Plugins/Extensions/MediaInfo ]
+then
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MediaInfo > /dev/null 2>&1
+echo "An older version of MediaInfo was found and removed"
+echo "Proceeding to installation..."
+else
+echo "MediaInfo was not found in the system"
+echo "Proceeding to installation..."
+fi
+exit 0
