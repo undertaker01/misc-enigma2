@@ -6274,8 +6274,19 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="Title" render="Label" position="center,41" size="400,30" font="Regular;23" foregroundColor="white" backgroundColor="background20" halign="center" transparent="1" />
-    <widget name="list" position="35,325" size="1210,326" itemHeight="29" zPosition="25" CoolFont="Regular;19" CoolServiceFont="Regular;19" CoolEventFont="Regular;19" CoolServiceSize="245" CoolEventSize="720" CoolServicePos="4" CoolServiceHPos="1" CoolEventPos="355" CoolEventHPos="1" CoolBarPos="240" CoolBarHPos="10" CoolBarSize="100" CoolBarHigh="10" CoolTimePos="265" CoolTimeHPos="2" CoolTimeSize="150" CoolDurationPos="1055" CoolDurationSize="100" CoolDurationColor="white" CoolServiceColor="white" CoolBarColor="white" CoolEventColor="white" CoolBackColorSel="metrixSelection" CoolRecPreColor="#f7c006" CoolRecColor="#e62711" CoolTunerCol="white" CoolCurrentCol="white" foregroundColor="white" backgroundColor="background20" transparent="1" />
-    <ePixmap pixmap="MetrixHD_MOD/buttons/red.png" position="70,660" size="30,40" alphatest="blend" />
+    <widget name="list" position="35,325" size="1210,320" itemHeight="29" zPosition="25" CoolFont="Regular;19"
+				CoolServiceFont="Regular;19" CoolServiceColor="white" CoolServicePos="4" CoolServiceHPos="1" CoolServiceSize="241"
+				CoolDayColor="white" CoolDayPos="250" CoolDayHPos="1" CoolDaySize="35"
+				CoolDateColor="white" CoolDatePos="305" CoolDateHPos="1" CoolDateSize="70"
+				CoolTimeColor="white" CoolTimePos="380" CoolTimeHPos="1" CoolTimeSize="70"
+				CoolEventFont="Regular;19" CoolEventColor="white" CoolEventPos="455" CoolEventHPos="1" CoolEventSize="500"
+				CoolBarColor="white" CoolBarPos="960" CoolBarHPos="1" CoolBarSize="100" CoolBarHigh="10"
+				CoolDurationColor="white" CoolDurationPos="1055" CoolDurationHPos="1" CoolDurationSize="100"
+				CoolBackColor="background20" CoolBackColorSel="metrixSelection"
+				CoolTunerCol="white"
+				CoolCurrentCol="white"
+				CoolRecEventBackColor="#000000" CoolRecPreColor="#f7c006" CoolRecColor="#e62711" foregroundColor="white" backgroundColor="background20" transparent="1" />
+		<ePixmap pixmap="MetrixHD_MOD/buttons/red.png" position="70,660" size="30,40" alphatest="blend" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/green.png" position="380,660" size="30,40" alphatest="blend" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/yellow.png" position="690,660" size="30,40" alphatest="blend" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/blue.png" position="1000,660" size="30,40" alphatest="blend" />
