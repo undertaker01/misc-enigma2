@@ -1126,8 +1126,8 @@
 		<widget source="Title" render="Label" position="115,490" size="700,45" font="Bold; 30" halign="right" foregroundColor="black" backgroundColor="white" transparent="1" />
 		<ePixmap position="15,525" size="35,27" pixmap="Nobile/buttons/red.png" alphatest="blend" />
 		<ePixmap position="215,525" size="35,27" pixmap="Nobile/buttons/green.png" alphatest="blend" />
-		<eLabel text="Cancel" position="50,526" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
-		<eLabel text="Save" position="250,526" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget source="key_red" render="Label" position="50,526" zPosition="1" size="200,26" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="grey" />
+		<widget source="key_green" render="Label" position="250,526" zPosition="1" size="200,26" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="grey" />
 	</screen>
 	<screen name="mediaInfo" position="center,center" size="840,570" title="MediaInfo" flags="wfNoBorder">
 		<widget source="global.CurrentTime" render="Label" position="40,25" size=" 80,25" font="Regular;23" backgroundColor="black" transparent="1">
@@ -1151,10 +1151,6 @@
 		<widget source="key_green" render="Label" position="250,526" zPosition="1" size="200,26" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="grey" />
 		<widget source="key_yellow" render="Label" position="450,526" zPosition="1" size="200,26" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="grey" />
 		<widget source="key_blue" render="Label" position="650,526" zPosition="1" size="200,26" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="grey" />
-		<eLabel text="Loeschen" position="50,526" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
-		<eLabel text="AddDownload" position="250,526" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
-		<eLabel text="Start/Stop Download" position="450,526" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
-		<eLabel text="Einstellung" position="650,526" size="200,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
 	</screen>
 	<screen name="ElektroProfile" position="center,center" size="840,570" title="Elektro Power Save Profile Times" flags="wfNoBorder">
 		<widget source="global.CurrentTime" render="Label" position="40,25" size=" 80,25" font="Regular;23" backgroundColor="black" transparent="1">
@@ -4493,5 +4489,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="green" render="Label" position="250,526" zPosition="1" size="200,26" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="grey" />
 		<widget source="yellow" render="Label" position="450,526" zPosition="1" size="200,26" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="grey" />
 		<widget source="blue" render="Label" position="650,526" zPosition="1" size="200,26" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="grey" />
+	</screen>
+	<screen name="SimpleSummary" title="Simple Summary" position="0,0" size="132,64">
+		<widget source="parent.Title" render="Label" position="6,0" size="120,64" font="Display;14" halign="center" valign="center" />
 	</screen>
 </skin>
