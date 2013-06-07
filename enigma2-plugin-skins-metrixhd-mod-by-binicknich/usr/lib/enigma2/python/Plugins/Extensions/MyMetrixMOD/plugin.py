@@ -134,11 +134,11 @@ config.plugins.MyMetrixMOD.InfobarTunerInfo = ConfigSelection(default="infobar-t
 				#ChannelSelection
 config.plugins.MyMetrixMOD.ChannelSelectionFontSize = ConfigSelection(default="channelsel-fontsize-20", choices = [
 				("channelsel-fontsize-20", _("20 Regular")),
-				("channelsel-fontsize-20thin", _("20 Thin")),
+				("channelsel-fontsize-20-thin", _("20 Thin")),
 				("channelsel-fontsize-22", _("22 Regular")),
-				("channelsel-fontsize-22thin", _("22 Thin")),
+				("channelsel-fontsize-22-thin", _("22 Thin")),
 				("channelsel-fontsize-24", _("24 Regular")),
-				("channelsel-fontsize-24thin", _("24 Thin"))
+				("channelsel-fontsize-24-thin", _("24 Thin"))
 				])
 
 #######################################################################
