@@ -1,8 +1,0 @@
-Package: enigma2-plugin-extensions-mediainfo
-Version: 0.6r3
-Description: Enigma2 Plugin
-Section: extra
-Maintainer: einfall
-Architecture: all
-Homepage:
-Depends:
