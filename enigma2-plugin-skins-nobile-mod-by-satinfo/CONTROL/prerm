@@ -1,0 +1,4 @@
+#!/bin/sh
+TYPE=$(cat /proc/stb/info/gbmodel)
+MODEL=$(cat /proc/stb/info/model)
+echo "             Skin Nobile MOD by satinfo will be removed from $MODEL $TYPE            "
