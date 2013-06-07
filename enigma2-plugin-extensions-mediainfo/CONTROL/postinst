@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "********************************************************"
+echo "*  MediaInfo installed                                 *"
+echo "*                                                      *"
+echo "*  Restart the Engima2 GUI to activate the plugin      *"
+echo "********************************************************"
+exit 0

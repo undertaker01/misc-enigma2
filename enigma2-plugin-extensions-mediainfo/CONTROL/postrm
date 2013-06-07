@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Removing MediaInfo Plugin from the system ..."
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/mediainfo > /dev/null 2>&1
+exit 0
