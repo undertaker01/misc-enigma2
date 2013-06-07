@@ -1,0 +1,6 @@
+#!/bin/sh
+rm -rf /usr/share/enigma2/skin_display96.xml
+TYPE=$(cat /proc/stb/info/gbmodel)
+MODEL=$(cat /proc/stb/info/model)
+echo "             Skin Nobile MOD by satinfo will be installed on $MODEL $TYPE            "
+	
