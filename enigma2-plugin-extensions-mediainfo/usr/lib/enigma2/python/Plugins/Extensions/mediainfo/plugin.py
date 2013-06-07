@@ -182,8 +182,8 @@ class mediaInfoSetup(ConfigListScreen, Screen):
 			<widget name="config" position="0,125" size="1050,350" backgroundColor="#00101214" scrollbarMode="showOnDemand" transparent="0" />
 			<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/mediainfo/buttons/key_red.png" position="20,480" size="30,30" alphatest="blend" />
 			<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/mediainfo/buttons/key_green.png" position="240,480" size="30,30" alphatest="blend" />
-			<eLabel text="Cancel" position="60,480" size="180,26" zPosition="1" font="Regular;20" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
-			<eLabel text="Save" position="280,480" size="180,26" zPosition="1" font="Regular;19" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
+			<widget source="key_red" render="Label" position="60,480" size="180,26" zPosition="1" font="Regular;20" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
+			<widget source="key_green" render="Label" position="280,480" size="180,26" zPosition="1" font="Regular;19" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
 			</screen>"""
 
 	def __init__(self, session):
@@ -197,6 +197,9 @@ class mediaInfoSetup(ConfigListScreen, Screen):
 		self.configlist.append(getConfigListEntry("Speicher Downloads nach:", config.plugins.mediainfo.savetopath))
 		
 		self["config"].setList(self.configlist)
+		
+		self["key_red"] = Label(_('Cancel'))
+		self["key_green"] = Label(_('Save'))
 		
 		self["actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "WizardActions", "ColorActions", "SetupActions", "NumberActions", "MenuActions"], {
 			"green" : self.keySave,
@@ -246,10 +249,10 @@ class mediaInfo(ConfigListScreen, Screen):
 			<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/mediainfo/buttons/key_green.png" position="240,480" size="30,30" alphatest="blend" />
 			<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/mediainfo/buttons/key_yellow.png" position="460,480" size="30,30" alphatest="blend" />
 			<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/mediainfo/buttons/key_blue.png" position="700,480" size="30,30" alphatest="blend" />
-			<eLabel text="Loeschen" position="60,480" size="180,26" zPosition="1" font="Regular;20" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
-			<eLabel text="AddDownload" position="280,480" size="180,26" zPosition="1" font="Regular;19" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
-			<eLabel text="Start/Stop Download" position="500,480" size="200,26" zPosition="1" font="Regular;19" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
-			<eLabel text="Einstellung" position="740,480" size="160,26" zPosition="1" font="Regular;20" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
+			<widget source="key_red" render="Label" position="60,480" size="180,26" zPosition="1" font="Regular;20" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
+			<widget source="key_green" render="Label" position="280,480" size="180,26" zPosition="1" font="Regular;19" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
+			<widget source="key_yellow" render="Label" position="500,480" size="200,26" zPosition="1" font="Regular;19" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
+			<widget source="key_blue" render="Label" position="740,480" size="160,26" zPosition="1" font="Regular;20" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
 			</screen>"""
 
 	def __init__(self, session, livestreaming):
@@ -261,6 +264,11 @@ class mediaInfo(ConfigListScreen, Screen):
 		self["pinfo"] = Label("")
 		self['head'] = Label("Current Downloads:")
 
+		self["key_red"] = Label(_('Delete'))
+		self["key_green"] = Label(_('Add Download'))
+		self["key_yellow"] = Label(_('Start/Stop Download'))
+		self["key_blue"] = Label(_('Settings'))
+				
 		self.dllist = []
 		self.chooseMenuList = MenuList([], enableWrapAround=True, content=eListboxPythonMultiContent)
 		self.chooseMenuList.l.setFont(0, gFont('Regular', 24))
