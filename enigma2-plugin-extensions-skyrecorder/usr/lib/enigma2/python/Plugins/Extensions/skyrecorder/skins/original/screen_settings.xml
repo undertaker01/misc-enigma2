@@ -1,0 +1,23 @@
+ <!-- ###Settings### -->
+  <screen name="skyrecorder_Settings_v05" position="center,center" size="1280,720" title="Sky Anytime" flags="wfNoBorder">
+    <ePixmap position="0,0" size="1280,720" zPosition="-1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/skybg.png" />
+    <widget source="global.CurrentTime" render="Label" position="840,55" size="410,55" font="Regular;26" valign="center" halign="right" backgroundColor="#26181d20" transparent="1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y  %H:%M:%S</convert>
+    </widget>
+	<widget name="title" position="340,55" size="500,55" backgroundColor="#26181d20" transparent="1" zPosition="1" font="Regular;26" valign="center" halign="center" />
+    <widget source="session.VideoPicture" render="Pig" position="913,143" size="328,186" zPosition="3" backgroundColor="transparent" />
+    <eLabel position="912,142" size="330,188" backgroundColor="#00ffffff" zPosition="0" name="Videoback" />
+    <eLabel position="913,143" size="328,186" backgroundColor="#00000000" zPosition="1" name="Videofill" />
+    <widget name="config" position="65,363" size="1000,275" backgroundColor="#26181d20" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/sel30_1200.png" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="log" position="65,130" size="840,210" zPosition="0" font="Regular;17" transparent="1" />
+    <eLabel name="vertical" position="1,348" size="1280,5" backgroundColor="#26181d20" zPosition="2" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/red_round.png" position="62,651" zPosition="1" size="32,32" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/green_round.png" position="362,651" zPosition="1" size="32,32" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/yellow_round.png" position="667,651" zPosition="1" size="32,32" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/blue_round.png" position="981,651" zPosition="1" size="32,32" alphatest="on" />
+    <eLabel text="Datenbank aufräumen" position="99,656" size="260,26" zPosition="1" font="Regular; 19" halign="left" backgroundColor="#26181d20" transparent="1" />
+    <eLabel text="Speichern" position="399,656" size="260,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="#26181d20" transparent="1" />
+    <eLabel text="Timerverlauf" position="705,656" size="200,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="#26181d20" transparent="1" />
+    <eLabel text="Timer hinzufügen" position="1019,656" size="260,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="#26181d20" transparent="1" />
+    
+  </screen>

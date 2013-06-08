@@ -1,0 +1,91 @@
+### Version: SkyRecorder (ehemals Sky Anytime) v1.2.4
+- SkyRecorder Ordnerstruktur ist nun optional aktivierbar
+
+### Version: SkyRecorder (ehemals Sky Anytime) v1.2.3
+- Neu: Taste "7" und "9" in der Hauptliste schlatet die Sortierung der Liste um.
+- Neu: Taste "<" und ">" schaltet in der Hauptliste die angezeigte Kategorie-Gruppe um.
+- Neu: In den Einstellungen kann mit der "Hilfe/Help"-Taste eine kleine Bedienungsanleitung aufgerufen werden.
+- Neu: Taste "0" geht nun bei allen Einträgen. D.h. Sendungen die "rot" markiert sind, können auch auf Hidden gesetzt werden. Timer werden automatisch entfernt.
+- Datenbankscript zum Erstellen der Datenbank geupdated. ("KinoweltTV" umbenannt zu "Kinowelt TV")
+- Ordner "SkyRecorder" für die Ordnerstruktur wird nach Bedarf erstellt, wenn man den Zielordner bzw. Basisordner in den Einstellungen ändert.
+- diverse kleinere Anpassungen
+
+### Version: SkyRecorder (ehemals Sky Anytime) v1.2.2
+- Fixed: Sortierung der Hauptliste hat bei manchen sqlite3 Version nicht richtig funktioniert.
+- Added: Anzahl der Sendetermine in der Hauptliste anzeigen.
+- Sortierung im Fenster Timerverlauf sortiert nach Startzeit absteigend
+- Fixed: Archiv zeigt nicht alle Einträge an, wenn das genre leer ist. Genre wird als "Sonstiges" gemappt.
+
+### Version: SkyRecorder (ehemals Sky Anytime) v1.2.1
+- Fixed: Intervall für automatische Datenbankupdates wurde manchmal nicht aktualisiert
+- Added: Ordnerstruktur für Aufnahmen hinzugefügt. Es wird der Ordner "SkyRecorder" mit Unterordnern für die Genre-Gruppen erstellt.
+  Aufnahmen werden druch die Zuordnung der Genre zu den Gruppen automatisch in die jeweiligen Ordner gespeichert.
+- Das Archiv liest nun auch Unterordner ein. (Standard max-depth=3, kann im script angepasst werden.)
+- Vorschaubilder-Tempdateien reduziert. D.h. weniger Speicherverbauch in /tmp
+- Mit der Taste "5" kann im Hauptscreen ein Cover neu geladen werden. Nützlich, wenn das Bild falsch angezeigt wird.
+- Es werden nur automatische Timer gesetzt für Sendungen, die als "is_new" (grün) markiert sind.
+  Dadurch kann man die Einstellungen "nur Neuerscheinungen suchen" auch mal auf "nein" stellen.
+- Metrix-Skin aktualisiert. Vielen Dank an root_
+- Fixed: Archiv Page-Up/Page-Down in der Filmliste war verdreht
+- Die Taste "2" im Hauptscreen schaltet zwischen Neuerscheinungen und Allem um. (wenn man in den Einstellungen nur Neuerscheinungen suchen auf "nein" gestellt hat und ein Datenbankupdate gemacht hat)
+
+### Version: SkyRecorder (ehemals Sky Anytime) v1.2
+- Neuer Plugin-Name "SkyRecorder"
+- Einträge die auf "Hidden" (grau) stehen oder fertig sind (blau), könnnen mit der Taste "8" aus der Datenbank gelöscht werden
+- Die Interne-Timerliste ist nun ein egener Screen. Man kann alle, oder nur einzelne gemerkte Timereinträge entfernen (nicht die Timer selbst!)
+- Das Archiv liest nun den Zielordner ein.
+- neues Skin: metrix (Danke an LinuxLover2012)
+- Fixed: GS wenn keine Aufnahmen vohanden
+- Filter für das Archiv hinzugefügt, um nur Filmdateien zu laden
+- Struktur der Skins geändert. Alle Grafiken liegen nun im jeweiligen skins/images Ordner
+- Fixed: Fehler in der Timerbegrenzung
+- Mit der Taste "0" können einzelne Titel auf "Hidden" gesetzt und gleichzeitig zur Ignorierliste hinzugefügt werden.
+- Zeit für tägliches Datenbankupdate einstellbar (Stunden und Minuten)
+- diverse kleinere Anpassungen
+
+### Version: Sky Anytime v1.0.1
+- automatische Datenbankupdate-Einstellung angepasst. Beim Aktiveren der Option wird erst nach dem eingestellten Intervall ein Update gestartet.
+- keine weiteren Sendetermine für abgeschlossene Aufnahmen hinzufügen
+- Alle Sender in der Senderliste sind bei der Erstinstallation oder dem Neuerstellen der Datenbank deaktiviert.
+- Option zum eingrenzen der gleichzeitigen Aufnahmen (liest aber noch keine Tuner oder Transponder aus, kommt evtl. noch)
+- Datum und Uhrzeit des letzten Datenbankupdates wird im Einstellungsfenster angezeigt
+- fertige Aufnahmen, die in der internen Timer-Merkliste vorhanden sind, werden "blau" markiert.
+- Einträge die auf "Hidden" (grau) stehen oder fertig sind (blau), könnnen mit der Taste "8" aus der Datenbank gelöscht werden 
+
+### Version: Sky Anytime v1.0.0
+- NEU: Nutzung der JSON-API vom skygo TV-Guide
+- Option um eine bestimmte Anzahl an Tagen aus dem Guide zu laden hinzugefügt.
+- Option hinzugefügt, um nur Neuerscheinungen oder den kompletten TV-Guide zu laden.
+- Ein Datenbankupdate kann mit der EPG/Info-Taste gestartet oder abgebrochen werden.
+- Sortierfunktionen für Filmliste hizugefügt.
+- Datenbankstruktur erweitert bzw. angepasst. (neue Sendernamen, neue Genres)
+- kleinere Bugfixes
+
+### Version: Sky Anytime v0.9
+- diverse Änderungen im Code die Objekt und Stringvergleiche betreffen.
+- Timereinträge können jetzt direkt aus dem Plugin wieder entfernt werden.
+- Genre können Gruppen zugeordnet werden. Diese werden später an verschiedenen Stellen ausgwertet
+- Struktur der Einstellungen angepasst.
+- Option hinzugefügt, um die STB in den Standby oder Deep-Standby zu schicken.
+  Funktioniert nur im Zusammenhang mit der automatischer Aktualisiereung der Datenbank und dem
+  Modus "Deep-Standby beenden". Beide Optionen müssen aktiviert sein.
+- GS behoben, wenn nur ein Sender oder nur ein Genre aktiviert wurde.
+- Das Archiv zeigt nur Einträge, die am Zielort existieren.
+- Der Timer Vor- und Nachlauf kann nun im Plugin selbst eingestellt werden. Defaultwerte sind die globalen
+  Systemeinstellungen für margin_before und margin_after.
+- Status in Datenbank erweitert: "True","False","Hidden".
+- Mit der Taste "0" kann eine Sendung direkt ignoriert oder wieder aktiviert werden (Hidden).
+- Sky TV-Guide URL wurde geändert.
+- SQL-Funktion für runautocheck ghinugefügt, die events mit status "Hidden" auslässt.
+
+### Version: Sky Anytime v0.8.3 rc1
+- Der Eintrag "False" im Archiv ist behoben. (einfall, Du Adlerauge;) )
+- Der Default-Datenbankpfad ist korrigiert (plugin-Verzeichnis, nicht Extensions)
+- Anzeigefehler in der Filmliste, wenn man aus einem anderen Fenster zurückkehrt. (Inhalt wurde erst bei nochmaligem Wechsel eines Eintrags richtig angezeigt)
+- Filme aus dem Archiv starten geht besser. (Servicereferenz korrigiert)
+- Die Senderliste merkt sich die letzte Position, wenn man von "Sendernamen umschlüsseln" zurückkehrt.
+- Die Vorschaubilder werden nun auch in der Datenbank abgelegt.
+- Wenn man den Datenbankpfad ändert, wird versucht die bestehende Datenbank zu kopieren.
+- Feld id_genre für Abfragen in der Tabelle "added" hinzugefügt.
+- bestehende Timereinträge werden immer in added importiert, solange sieh in der Systemtimerliste vorkommen
+- diverse Änderungen im Eventhandling

@@ -1,0 +1,59 @@
+#!/bin/sh
+#
+# skyrecorder update script v1.2.2
+#
+# replace all settings-strings matching skyanytime with skyrecorder
+# backupfile of the enigma2 settings are stored as settings.bak
+#
+# second step is to update the current database file
+#
+
+INFO_PREFIX="[skyrecorder] "
+SETTINGS_FILE="/etc/enigma2/settings"
+SETTINGS_FILE_TMP="/etc/enigma2/settings_tmp"
+BACKUP_DATE=$(date +"%y-%m-%d_%H-%M-%S")
+SETTINGS_BACKUP_FILE="/etc/enigma2/settings_"${BACKUP_DATE}".bak"
+
+#echo "$INFO_PREFIX updating file '${SETTINGS_FILE}'"
+#cp "$SETTINGS_FILE" "$SETTINGS_BACKUP_FILE" && cat "$SETTINGS_FILE" | sed 's/config.plugins.skyanytime/config.plugins.skyrecorder/' | sed 's/SkyAnytime/SkyRecorder/'  | sort -u >"$SETTINGS_FILE_TMP" && mv "$SETTINGS_FILE_TMP" "$SETTINGS_FILE"
+
+#echo "$INFO_PREFIX backup of file '${SETTINGS_FILE}' is stored in '${SETTINGS_BACKUP_FILE}'"
+
+SKYDB_PATH=$(grep -o "/.*/skydb.db" /etc/enigma2/settings)
+
+[ "$SKYDB_PATH"x = "x" ] && exit 0
+
+# lets build our inline python script to update our database file
+echo "$INFO_PREFIX updating file '${SKYDB_PATH}'"
+
+python <<EOF
+import sqlite3
+connection=sqlite3.connect("$SKYDB_PATH")
+connection.text_factory = str
+curser=connection.cursor()
+try:
+	curser.execute("""SELECT is_new FROM eventdetails LIMIT 1""")
+	print "$INFO_PREFIX database skydb.db is already uptodate"
+except Exception:
+	print "$INFO_PREFIX altering database skydb.db"
+	curser.execute("""ALTER TABLE eventdetails ADD COLUMN is_new INTEGER NULL""")
+	connection.commit()
+	
+try:
+	curser.execute("""INSERT OR IGNORE INTO genre (id_genre,genre,status) values (61,'Wrestling','False')""")
+	connection.commit()
+	curser.execute("""INSERT OR IGNORE INTO genregroup (id_genre,id_groups) values (61,4)""")
+	connection.commit()
+	curser.execute("""INSERT OR IGNORE INTO genre (id_genre,genre,status) values (62,'Erotikfilm','True')""")
+	connection.commit()
+	curser.execute("""INSERT OR IGNORE INTO genregroup (id_genre,id_groups) values (62,1)""")
+	connection.commit()
+except Exception:
+	print "$INFO_PREFIX WARNING: could not update table 'genre'"
+EOF
+
+echo "$INFO_PREFIX update done"
+echo "$INFO_PREFIX Please restart enigma2 now"
+
+
+exit 0

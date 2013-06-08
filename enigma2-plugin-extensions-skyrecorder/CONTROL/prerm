@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# skyrecorder cleanup script v1.2
+#
+
+# clean up compiled python scripts
+rm /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/*.pyc > /dev/null 2>&1
+rm /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/*.pyo > /dev/null 2>&1
+
+exit 0

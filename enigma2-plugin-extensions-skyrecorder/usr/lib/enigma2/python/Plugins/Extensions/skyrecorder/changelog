@@ -1,0 +1,144 @@
+### Version: Sky Anytime v1.0.0
+- NEW: JSON-API from the skygo TV-Guide is now our new tv-guide-source
+- added option to get a userdefined among of days from the tv-guide.
+- added option to choose between only download new events or the whole tv-guide.
+- with EPG/Info-Button you can start or stop a databaseupdate.
+- main-movielist is now sortable in some ways.
+- extended or modified database-structure.
+- some minor Bugfixes
+
+### Version: Sky Anytime v0.9
+- checked and changed some wrong object vs. string comparsions.
+- you can now remove added timers from within the plugin
+- genres are now goupable
+- modified seettings-structure
+- added option to send STB to Soft-Standby or Deep-Standby.
+  This Option only works in combination of "Deep-Standby beenden" and "automatische Timereinträge".
+  Both values must not be set to "nie" or "nein"
+- no more greenscreen when only one channel or one genre ist activated.
+- in archiv screen only existing file are displayed in movielist.
+- timer margin_before and margin_after can now be set in the plugins settings dialog.
+- FIXED: Sky has change TV-Guide url.
+
+### Version: Sky Anytime v0.8.3 rc1
+- fixed: "False" in genrelist in archiv
+- fixed: wrong default database-path
+- fixed: missing last_index for filmlist info and picture
+- fixed: wrong servicereference in archiv for playing .ts files
+- added last_index for select channellist when calling channeleditor
+- preview picture is now stored in databse
+- some minor code optimisation relted to exception-handling
+- added field "id_genre" to chekAdded function.
+- always import existing record timer entries from system timerlist into table "added"
+
+### Version: Sky Anytime v0.8.2
+- changed getDayOfTheWeek method to make use of index to get the current day of week
+- added option to modify the STB-channelname in channelscreen
+- fixed skin elgato. (Thanks to root_, again)
+- check for sqlite3 installation. If not installed, display message box with install instructions
+- some minor bugfixes
+
+### Version: Sky Anytime v0.8.1
+- bugfix: greenscreen when no channel was found in serviceref
+- added lastindex for main movielist
+
+### Version: Sky Anytime v0.8
+- splitted plugin.py in separate classfiles
+- added new skins "original" and "elgato". skins can be switched in settings menu
+- added option to also select day range for timers
+- method to to check "fromtime" and "tomtime" for timerentries rewritten
+- added database, based on sqlite3, to store the whole sky tv-guide and the channel, genre and skiword settings.
+- added function to rerun sky guide check, if the first attempt failed (does not really fix the timeout problems, but sometimes)
+- added new option to chosse a custom target folder for recordings
+- added option to change database folder (Caution, this may reset you database an settings)
+- first part of the archiv screen and functionality. More to come in the next versions
+- added option to manually run auto recordtimer entries.
+- settings screen is now under key "menu" in main screen.
+- in settingsscreen you have to press the "green" key to store you settings. "Ok" key will let you change single settings, like target folder.
+
+### Version: Sky Anytime v0.7.2
+- fixed Error 403 which was related to a agnet-block at Sky Server
+- added funtions to change the user agent evertime we call the sky guide
+
+### Version: Sky Anytime v0.7.1
+- automatic timermodus now works like before. If you change the timer interval, it does not start directly, if the timer was
+  running before.
+
+### Version: Sky Anytime v0.7
+- added option to choose recordtimer mode. Possible values are "record" (default) and "justplay" (only notify, do not record anything)
+- fixed: did not find channel "Nat Geo Wild HD"
+- config timerinterval now uses selection list. recommend is scan sky guide every 360 min, default is "never"
+- some code modifcation related to config settings and values
+- show notification message if timer conflicts (mostly handled by TimerRecord itself)
+- when timer conflicts, try to add alternativ broadcast date for current show
+- removed duplicate entries in sky_log (already added messages)
+- extended decodeHtml to also replace Ü,Ä and Ö (maybe we can changes this in the future, but for now its better to replace umlauts)
+- added wake up from deep standby option (please test)
+
+### Version: Sky Anytime v0.6
+- fixed bug were decodeHtml is called twice on some name fields
+- appended decodeHtml to replace more special chars
+- added config default hdd path to build anytimefolder targetfolder. Now it should be save to use this option. If hdd is not available, anytimefolder is disabled
+- added alternative timer entry if addtimer conflicts
+- modified self.channelliste.append(channelName) changed from ((channelName))
+- Fixed: missing or duplicate Sky TV-Guide pages. Please test
+- set recordTimer afterevent mode to auto (integer = 3)
+- added Sky Anytime Logo. Thanks to "takonien" at vuplus-support forum.
+
+### Version: Sky Anytime v0.5.1
+- fixed: some channelsnames were truncatated and could not be found in channelref
+- fixed: channelname "National Geographic HD" in Sky guide is named "NatGeo HD" in channelref
+- removed compiled __init__.pyo from zip (were was my head?)
+- TODO: workaround for missing or duplicated event entries in movielist. Sky Guide sometimes returns wrongs pages. (please fix it, Sky!)
+- replaced functions "guideData2" to prepare plugin for Sky Guide wrong pages Bug
+- fixed: changed: "if checkString in self.addedliste:" to "if checkString.lower() in [added.lower() for added in self.addedliste]"
+- added small indicator to show the number of searchresults on the screen
+- timeout for page request is now set to 20 seconds per request
+- do not reload sky pages again when leaving subwindows
+- menutext in settingswindow for silten timer mode changed 
+- request errors will be shown in "handlungs" field
+
+### Version: Sky Anytime v0.5
+- fix autotimer startup Bug
+- rechanged skinnames as auggested by user "schomi" in vuplus-support forum. Scheme should match: "SkyAnytime_ChannelSelect_v05"
+- renamed Version back to "einfall" versionstring scheme - included pluginSubVersion field "Beta"
+- commented not needed moduls
+
+### Version: Sky Anytime v0.4d greysky-mod
+- added method to filter out channel "Sky 3D" of "Sky Cinema HD" Sednerliste, if 3d is not enabled
+- extended addTimer function to recheck if target anytime folder exist. If not, create it when config is set to "yes"
+- changed functions and vairable names in class "skySkipWordsSelect" to match skipword name definition. (replaced the channel strings)
+- changed screen names to make them unique and skinable
+- added functions to write out and read the downloaded guide data. (but disabled this time)
+- some modifications related to the count of callinge method "decodehtml"
+- some modifactions on how to return from a loop when "stopit" will be set to "true" 
+- changed from ((channelName)) to (channelName) in function "readChannels" to prevent matching single chars
+- changed from ((channelName)) to (skipWord) in function "readSkipWordsListe" to prevent matching single chars
+- changed from ((channelName)) to (genreString) in function "readGenreListe" to prevent matching single chars
+- fixed Bug were autocheck refreshintervall is not set, when interval is changed in settings dialog and runautocheck is set to "ja" on sessionstart.
+
+### Version: Sky Anytime v0.4c greysky-mod
+- sky search sometimes does not work, why? reactivated previous search method
+
+### Version: Sky Anytime v0.4b greysky-mod
+- added genres "Dokumentarserie", "Anwaltsserie","Talkshow","Talk" and "Miniserie" in default "sky_genre" file
+- added HD-Sendetermine exclude Array (nonHDeventList) for Stations like "Eurosport HD", because in Sky-Guide only "Sendetermine" is used
+- added filter for "Description", which holds episodenames or genretitle
+- added Option to use target folder SkyAnytime - globalpath is "/media/hdd/movie/SkyAnytime/"
+- added Option to reset logfile (sky_log)
+- added Option to reset timer added list (sky_added)
+- added some new functions
+- skip events with starttime lower than now, but endtime greater than now. We only want entire shows recorded.
+- some minor modifications, such as global fontsize for content (contentSize) or global version-string (pluginVersion)
+- fixed wrong encoding of the files "sky_channels" and "sky_log". Both were ISO-encoded, but should be utf-8.
+- fixed a small typo in "sky_genre" for "Thriller"
+- added reverse order in logfile in read function. Newest entry comes first in settings screen
+- modfied "sky_added" write and search code to make use of titel and description field
+- added silentmode option for timer entries
+- added global timeout setting for timer messagebox: msgTimeout = 3
+- removed page stepper in main-screen, because: get every guide-page, put in together and then display the whole guide-content as once (I guess its better)
+- added autostart support, or better, (re)activated some code in plugin.py
+- fixed sky startday problem: sky days are starting at 06:00 so timestamps must be modfied. Some new functions added for this
+- fixed search string for "Termine": "<tr>.*?<td>"... has to be "<tr.*?<td>"…
+- changed sky-guide-fetch method. Using now the search page in sky guid (could be more flexible for futurer changes)
+- added method to automaticly truncate the log file.

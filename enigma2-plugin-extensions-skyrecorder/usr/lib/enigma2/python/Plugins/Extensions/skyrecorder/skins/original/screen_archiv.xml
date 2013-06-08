@@ -1,0 +1,28 @@
+<!-- ###Archiv### -->
+  <screen name="skyrecorder_Archiv_v05" position="center,center" size="1280,720" title="Sky Anytime" flags="wfNoBorder">
+    <ePixmap position="0,0" size="1280,720" zPosition="-1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/skybg.png" />
+    <widget source="global.CurrentTime" render="Label" position="850,55" size="400,55" font="Regular;26" valign="center" halign="right" backgroundColor="#26181d20" transparent="1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y  %H:%M</convert>
+    </widget>
+    <widget name="handlung" position="65,142" size="835,190" backgroundColor="#26181d20" transparent="1" font="Regular;20" valign="top" halign="left" zPosition="1" />
+    <widget name="mainselect" position="460,55" size="250,55" backgroundColor="#26181d20" transparent="1" zPosition="1" font="Regular;26" valign="center" halign="left" />
+    <widget name="genreselect" position="913,357" size="328,250" backgroundColor="#26181d20" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/sel30_1200.png" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+	<widget name="movieselect" position="0,357" size="900,250" backgroundColor="#26181d20" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/sel30_1200.png" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+    <widget source="session.VideoPicture" render="Pig" position="913,143" size="328,186" zPosition="3" backgroundColor="transparent" />
+    <eLabel position="912,142" size="330,188" backgroundColor="#00ffffff" zPosition="0" name="Videoback" />
+    <eLabel position="913,143" size="328,186" backgroundColor="#00000000" zPosition="1" name="Videofill" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/red_round.png" position="62,651" zPosition="1" size="32,32" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/green_round.png" position="362,651" zPosition="1" size="32,32" alphatest="on" />
+<!--
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/yellow_round.png" position="667,651" zPosition="1" size="32,32" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/blue_round.png" position="981,651" zPosition="1" size="32,32" alphatest="on" />
+-->
+    <eLabel text="zurück" position="99,656" size="180,26" zPosition="1" font="Regular; 19" halign="left" backgroundColor="#26181d20" transparent="1" />
+    <eLabel text="Film ab!" position="399,656" size="180,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="#26181d20" transparent="1" />
+ <!--   
+    <eLabel text="Inhalt" position="705,656" size="200,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="#26181d20" transparent="1" />
+    <eLabel text="Trailer" position="1019,656" size="160,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="#26181d20" transparent="1" />
+-->
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/up.png" position="1057,338" zPosition="1" size="20,15" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/down.png" position="1057,611" zPosition="1" size="20,15" alphatest="on" />
+  </screen>

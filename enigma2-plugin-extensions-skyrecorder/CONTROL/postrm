@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# skyrecorder cleanup script v1.2
+#
+
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/
+echo "Plugin SkyRecorder removed! You should restart enigma2 now!"
+exit 0

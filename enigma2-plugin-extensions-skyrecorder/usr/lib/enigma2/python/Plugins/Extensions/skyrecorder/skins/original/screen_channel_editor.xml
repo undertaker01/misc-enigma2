@@ -1,0 +1,12 @@
+<!-- ###Channelselect### -->
+  <screen name="skyrecorder_ChannelEditor_v05" position="center,center" size="1280,720" title="Sky Anytime" flags="wfNoBorder">
+    <ePixmap position="0,0" size="1280,720" zPosition="-1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/skybg.png" />
+    <widget source="global.CurrentTime" render="Label" position="850,55" size="400,55" font="Regular;26" valign="center" halign="right" backgroundColor="#26181d20" transparent="1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y  %H:%M</convert>
+    </widget>
+    <widget name="channeledit" position="65,143" size="840,470" backgroundColor="#26181d20" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/sel30_1200.png" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+    <widget source="session.VideoPicture" render="Pig" position="913,143" size="328,186" zPosition="3" backgroundColor="transparent" />
+    <eLabel position="912,142" size="330,188" backgroundColor="#00ffffff" zPosition="0" name="Videoback" />
+    <eLabel position="913,143" size="328,186" backgroundColor="#00000000" zPosition="1" name="Videofill" />
+     <eLabel text="links 'Sky TV-Guide', rechts 'STB' ... '+' = Sender in STB-Kanalliste gefunden, '-' = Sender nicht gefunden" position="99,656" size="900,26" zPosition="1" font="Regular; 19" halign="left" backgroundColor="#26181d20" transparent="1" />
+  </screen>

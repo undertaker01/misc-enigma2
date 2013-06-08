@@ -1,0 +1,12 @@
+Package: enigma2-plugin-extensions-skyrecorder
+Version: 1.2.4
+Section: misc
+Priority: optional
+Architecture: all
+Maintainer: einfall greysky
+Description: SkyRecorder - a plugin to add automatically timers for new SKY broadcasts
+Provides: enigma2-plugin-extensions-skyrecorder
+Conflicts: enigma2-plugin-extensions-skyanytime
+Replaces: enigma2-plugin-extensions-skyanytime
+Depends: libsqlite3-0, python-sqlite3, python-html, python-json
+Source: http://www.vuplus-support.org/wbb2/thread.php?threadid=42015

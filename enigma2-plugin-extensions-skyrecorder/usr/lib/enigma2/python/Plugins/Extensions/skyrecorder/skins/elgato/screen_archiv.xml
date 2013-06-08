@@ -1,0 +1,33 @@
+<!-- skyrecorder_Archiv -->
+  <screen name="skyrecorder_Archiv_v05" position="center,center" size="1280,720" title="Sky Anytime" flags="wfNoBorder">
+  <ePixmap position="0,0" size="1280,720" zPosition="-1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/elgato/images/bg-1280-nt.png" />
+  <widget source="global.CurrentTime" render="Label" position="840,22" size="300,54" font="Regular; 26" valign="center" halign="left" backgroundColor="#26181d20" transparent="1">
+    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1160,22" size="100,54" font="Regular;26" valign="center" halign="center" backgroundColor="#26181d20" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget name="mainselect" position="450,22" size="250,54" backgroundColor="#26181d20" transparent="1" zPosition="1" font="Regular;26" valign="center" halign="left" />
+    <widget name="handlung" position="66,76" size="835,200" backgroundColor="#26181d20" transparent="1" font="Regular;20" valign="top" halign="left" zPosition="1" />
+  <widget name="genreselect" position="913,357" size="328,250" backgroundColor="#26181d20" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/elgato/images/sel30_1200.png" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+  <widget name="movieselect" position="0,357" size="900,250" backgroundColor="#26181d20" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/elgato/images/sel30_1200.png" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+    <widget source="session.VideoPicture" render="Pig" position="913,78" size="328,186" zPosition="3" backgroundColor="transparent" />
+ <eLabel position="39,63" size="1200,1" backgroundColor="#00ffffff" name="Seperator up" />
+  <eLabel position="39,630" size="1160,2" backgroundColor="#00ffffff" transparent="0" zPosition="2" foregroundColor="#00ffffff" />
+  <eLabel position="906,64" size="3,567" backgroundColor="#00ffffff" name="Seperator vertical" />
+  <eLabel position="912,77" size="330,188" backgroundColor="#00ffffff" zPosition="0" name="Videoback" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/elgato/images/red.png" position="65,680" zPosition="1" size="250,10" alphatest="on" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/elgato/images/green.png" position="362,680" zPosition="1" size="250,10" alphatest="on" />
+<!--  
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/elgato/images/yellow.png" position="667,680" zPosition="1" size="250,10" alphatest="on" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/elgato/images/blue.png" position="981,680" zPosition="1" size="250,10" alphatest="on" />
+-->
+    <eLabel text="zurück" position="99,651" size="180,26" zPosition="1" font="Regular; 19" halign="center" backgroundColor="#26181d20" transparent="1" />
+    <eLabel text="Film ab!" position="399,651" size="180,26" zPosition="1" font="Regular;19" halign="center" backgroundColor="#26181d20" transparent="1" />
+<!--
+    <eLabel text="Inhalt" position="705,651" size="200,26" zPosition="1" font="Regular;19" halign="center" backgroundColor="#26181d20" transparent="1" />
+    <eLabel text="Trailer" position="1019,651" size="160,26" zPosition="1" font="Regular;19" halign="center" backgroundColor="#26181d20" transparent="1" />
+-->
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/up.png" position="1057,338" zPosition="1" size="20,15" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/down.png" position="1057,611" zPosition="1" size="20,15" alphatest="on" />
+  </screen>

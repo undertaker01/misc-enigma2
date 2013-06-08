@@ -1,0 +1,27 @@
+<!-- ###Timer### -->
+  <screen name="skyrecorder_TimerSelect_v05" position="center,center" size="1280,720" title="Sky Anytime" flags="wfNoBorder">
+    <ePixmap position="0,0" size="1280,720" zPosition="-1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/skybg.png" />
+    <widget source="global.CurrentTime" render="Label" position="850,55" size="400,55" font="Regular;26" valign="center" halign="right" backgroundColor="#26181d20" transparent="1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y  %H:%M</convert>
+    </widget>
+    <widget source="session.VideoPicture" render="Pig" position="913,143" size="328,186" zPosition="3" backgroundColor="transparent" />
+    <eLabel position="912,142" size="330,188" backgroundColor="#00ffffff" zPosition="0" name="Videoback" />
+    <eLabel position="913,143" size="328,186" backgroundColor="#00000000" zPosition="1" name="Videofill" />
+    <widget name="filmliste" position="40,360" size="950,270" backgroundColor="#26181d20" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/original/images/sel30_1200.png" zPosition="1" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/ico_hd_off.png" position="1010,580" size="29,20" zPosition="1" alphatest="blend" />
+    <widget name="hd" position="1010,580" size="29,20" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/ico_hd_on.png" zPosition="2" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/ico_format_off.png" position="1051,580" size="36,20" zPosition="1" alphatest="blend" />
+    <widget name="169" position="1051,580" size="36,20" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/ico_format_on.png" zPosition="2" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/ico_dolby_off.png" position="1100,580" size="57,20" zPosition="1" alphatest="blend" />
+    <widget name="dolby" position="1100,580" size="57,20" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/ico_dolby_on.png" zPosition="2" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/dualch_off.png" position="1165,580" size="28,17" zPosition="1" alphatest="blend" />
+    <widget name="dualch" position="1165,580" size="28,17" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/dualch_on.png" zPosition="2" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/ico_sub_off.png" position="1200,580" size="36,18" zPosition="1" alphatest="blend" />
+    <!-- <widget name="sub" position="1200,580" size="36,18" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/ico_sub_on.png" zPosition="2" /> -->
+    <widget name="image" position="1044,445" size="145,85" transparent="1" alphatest="blend" zPosition="2" />
+    <widget name="name" position="990,360" size="250,80" backgroundColor="#26181d20" transparent="1" font="Regular; 20" valign="center" zPosition="1" halign="center" />
+    <widget name="handlung" position="65,142" size="835,190" backgroundColor="#26181d20" transparent="1" font="Regular;20" valign="top" halign="left" zPosition="1" />
+    <eLabel position="1043,444" size="147,87" backgroundColor="#00ffffff" zPosition="0" name="imageback" />
+    <eLabel position="1044,445" size="145,85" backgroundColor="#00000000" zPosition="1" name="imagefill" />
+    <eLabel name="vertical" position="1,343" size="1280,5" backgroundColor="#26181d20" zPosition="2" />
+  </screen>

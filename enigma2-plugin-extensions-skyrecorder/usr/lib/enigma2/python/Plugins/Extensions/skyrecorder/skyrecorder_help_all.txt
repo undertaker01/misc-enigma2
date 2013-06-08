@@ -1,0 +1,133 @@
+Kleine Gebrauchsanleitung für das Plugin "SkyRecorder"
+
+Das Plugin "SkyRecorder" lehnt sich an die Idee von Sky Anytime an, Neuerscheinungen automatisch aufzunehmen.
+
+Wie arbeitet das Plugin?
+
+Das Plugin ermöglicht die automatische oder auch manuelle Aufnahme von
+Neuerscheinungen des deutschen Pay-TV-Anbieters Sky. Es erkennt auf der Basis des TV-Guides von Sky den Erstausstrahlungstermin und alle weiteren. Dabei kann die Aufnahme in Deep Standby- bzw. Standby-Zeiten des Receivers verlegt werden. Angezeigt werden die Filmbeschreibung incl. Bild sowie technische Daten zur Ausstrahlung wie DolbyDigital oder Zweikanalton.
+
+Eine Sendung ist einmal als Erstausstrahlung im Sky TV-Guide gekennzeichnet und zwar für den ersten Ausstrahlungstermin. Das Plugin "SkyRecorder" liest also den TV-Guide, erkennt wenn eine Sendung auf "neu" gesetzt ist und speichert den Eintrag in der Datenbank. Für alle weiteren Sendetermine dieser Sendung wird in der Datenbank nach dem Eintrag gesucht, der als "neu" markiert war. Ist der vorhanden, werden auch die anderen Termine als "neu" hinzugefügt.
+Die Aufnahmen werden automatisch in den vom Plugin erstellten Unterordnern des Ordners "SkyRecorder" gespeichert.
+
+Sky-Abo ist notwendig
+Voraussetzung für das Plugin ist ein Sky-Abonnement und das Vorhandensein der Sky-Sender in den Bouquets/in den persönlichen Senderlisten des Receivers. Bei Änderungen der Senderlisten genügt ein Gui-Neustart, damit das Plugin diese dann berücksichtigt.
+Geplant ist eine Einbindung der Services von IMDB und TMDB sowie das Löschen von Aufnahmen aus den SkyRecorder-Unterordnern nach einstellbarer Zeit.
+
+---------------------------------------------------
+1. Einstellungen vornehmen - Menü-Taste
+---------------------------------------------------
+Plugin öffnen, dann mit der Menü-Taste das Einstellmenü aufrufen.
+
+Grün
+Speichern der vorgenommenen Einstellungen! (zurück zum Hauptscreen) Die Einstellungen sind (hoffentlich) selbsterklärend.
+
+Rot
+Leert die Datenbank und entfernt alle bisherigen Timereinträge.
+
+Gelb
+Listenübersicht aller Timer. Diese Liste dient auch dazu doppelte Timer zu vermeiden. Das Plugin prüft, ob schon einmal eine Sendung mit gleichem Namen, gleicher Beschreibung, auf dem gleichen Sender und mit gleichem Genre aufgenommen wurde.
+
+Blau
+Hinzufügen aller automatischen Timer
+EPG/Info-Taste: Sofortiges Anstoßen der Timersuche unter Berücksichtigung der zuvor im Hauptscreen eingestellten Sender und Filter.
+￼￼￼￼￼￼￼
+------------------------------------------------
+2. Tastenfunktionen des Hauptscreens
+------------------------------------------------
+Rote Taste - Sender
+Anpassen der Sender an das gebuchte Sky-Abo per OK-Taste (off/on).
+
+Grüne Taste – Ignorierliste
+Anlegen einer persönlichen Ausschluss-Wörterliste (Hinzufügen). Wenn im Titel der Sky- Neuerscheinungen ein Wort dieser Skip-Liste vorhanden ist, wird die Sendung vom Plugin ignoriert, also gar nicht erst angezeigt. Es ist möglich, die einzelnen Einträge per OK-Taste zu deaktivieren (Minuszeichen) bzw. zu aktivieren (Pluszeichen) oder per roter Taste gänzlich zu löschen.
+
+Gelbe Taste – Kategorie
+Mit der OK-Taste kann das Genre von Sendungen abgewählt werden (Minuszeichen), Sendungen mit deaktiverten Genres werden in der Sendungsliste/Hauptliste ausgeblendet. Mit der Links- oder Rechtstaste kann die Genre-Zuordnung zu "Film, Serie, Dokumentation, Sport, Sky Select oder Sonstige" verändert werden. Aufgenommene Sendungen werden automatisch in die vom Plugin angelegten gleichnamigen Ordner gespeichert. (media/hdd/movie/SkyRecorder/...(Unterordner)
+
+Blau Taste – Archiv
+Wiedergabe von fertigen Aufnahmen (grüne Taste-Film ab!).
+Außerdem ist eine Auswahl der Aufnahmen über die Filterfunktion der Kategorien (Genre) per Rechts- Taste möglich.
+
+-------------------------------------------------------------------
+Kurz-übersicht der belegten Tasten und deren Funktionen
+-------------------------------------------------------------------
+1. Sendungen bzw. Hauptliste
+(rot) - Senderliste aufrufen
+(grün) - Ignorierliste (Skipword-Liste) aufrufen
+(gelb) - Kategorieliste (Genre) aufrufen
+(blau) - Archiv bzw. fertige Aufnahmen anzeigen und abspielen
+(Ok) - Sendetermine für den ausgewählten Eintrag anzeigen
+(0) - Eine Sendung deaktivieren bzw. aktivieren. Für deaktivierte Sendungen werden keine Timer hinzugefügt.
+(2) - Ansicht wechseln zwischen Neuersscheinungen oder komplette Liste (Wenn Daten vorhanden sind)
+(5) - Bild neu laden für ausgewählten Eintrag.
+(8) - Deaktivierten Eintrag oder abgeschlossene Aufnahme aus der Liste entfernen
+(7 bzw. 9) - Sortierung der Liste ändern.
+(< bzw. >) - Kategoriegruppe wechseln, deren Einträge in der Liste angezeigt werden soll.
+(Zahl vor Neu) - Anzeige der Anzahl der Sendetermine
+(menu) - Einstellungen aufrufen
+
+2. Senderliste
+(Ok) - Einen Sender aktivieren bzw. deaktivieren. Deaktivierte Sender werden in der Sendungsliste/Hauptliste ausgeblendet.
+(grün) - Sender-Umschlüsselungsseite aufrufen.
+
+3. Sender umschlüsseln
+(Ok) - Listeneintrag bearbeiten. Hier wird der Name des Senders, wie er in der STB- Bouquetliste benannt ist, eingetragen.
+4. Kategorieliste (Genre)
+(Ok) - Genre an- bzw. abwählen. Sendungen mit deaktiverten Genres werden in der Sendungsliste/Hauptliste ausgeblendet.
+(rechts/links) - Genre zu einer Gruppe zuordnen.
+￼￼
+5. Ignorierliste (Skipword-Liste)
+(grün) - Skipwort hinzufügen.
+(rot) - Skipwort entfernen
+(Ok) - Eintrag aktivieren, bzw. deaktivieren. Ist ein Skipwort aktiviert und befindet sich als
+Wortteil im Titel einer Sendung, wird diese Sendung ignoriert. Sie wird dann auch in der Sendungsliste/Hauptliste ausgeblendet.
+
+6. Archiv
+(Ok)/(grün) - Eintrag abspielen. (Es wird der interne movieplayer aufgerufen)
+(rot) - Zurück zur Hauptliste
+(links/rechts) - Zwischen Aufnahmeliste und Genreliste navigieren.
+
+7. Sendetermine
+(Ok) - Timer setzen bzw. löschen
+
+8. Einstellungen
+(rot) - Datenbank aufräumen bzw. komplett leeren. D.h. alle Daten des TV-Guides aus der Datenbank entfernen.
+(grün) - Änderungen an den Einstellungen speichern.
+(blau) - Für alle Sendungen der Sendungsliste/Hauptliste einen Timereintrag erstellen. Das ist die gleiche Funktion, wie automatische Timer hinzufügen. Nützlich, wenn man keine Automation nutzen möchte.
+(gelb) - Eine Liste der Sendungen anzeigen, die im Laufe der Zeit als Timer gesetzt wurden. Wichtig! Diese Liste dient auch dazu doppelte Timer zu vermeiden. Das Plugin prüft, ob schon einmal eine Sendung mit gleichem Namen, gleicher Beschreibung, auf dem gleichen Sender und mit gleichen Genre aufgenommen wurde. Diese Liste lässt sich in den Einstellungen auch komplett zurücksetzen, wenn benötigt.
+(menu) - Logdatei neu laden.
+(EPG/Info) - Datenbank manuell aktualisieren.
+
+-------------------------------------------
+Zusatzfunktionen im Hauptscreen
+-------------------------------------------
+Taste "0" - Einträge können mit "0" (Null) auf Hidden gesetzt. Timereinträge werden nach Bedarf entfernt.
+Taste "2" - Schaltet im Hauptscreen zwischen Neuerscheinungen und kompletter Liste um. (komplette TV-Guide Daten sind evtl. erst vorhanden, wenn in den Einstellungen "nur Neuerscheinungen suchen" auf "nein" gestellt wurde, vor dem letzten Datenbankupdate)
+Taste "5" - Im Hauptscreen kann ein fehlendes oder falsches Cover neu geladen werden.
+Taste "8" - Einträge die auf "Hidden" (grau) stehen oder fertig sind (blau), können mit der Taste "8" aus der Datenbank gelöscht werden.
+Taste "7" bzw. "9" - Sortierung der Liste umschalten
+Taste "<" bzw. ">" - Kategoriegruppe wechseln, deren Einträge in der Liste angezeigt werden soll.
+
+----------------------------------------------------------
+Farbbedeutungen der Neu-Buttons im Hauptscreen
+----------------------------------------------------------
+Neu rot: Sendung ist als Aufnahme-Timer hinzugefügt, OK zeigt den geplanten bzw. weitere Aufnahmetermine. Es können per OK manuell Veränderungen vorgenommen werden.
+
+Neu blau: Sendung ist bereits aufgenommen und befindet sich im Ordner SkyRecorder.
+
+Neu grün: Sendung ist eine Neuerscheinung, wird aber nicht aufgenommen, weil der Ausstrahlungstermin außerhalb des im Menü eingestellten Aufnahmezeitraums liegt. Sendung kann manuell per OK als Aufnahme-Timer hinzugefügt werden.
+
+Neu grau: Sendung wurde zuvor mit Taste (0) (Null) deaktiviert. Für deaktivierte Sendungen werden keine Timer hinzugefügt. Der Status kann mit "Null" wieder rückgängig gemacht werden.
+
+----------------------------------------------------------------------------------
+Eine Sendung von künftigen automatischen Timerdurchläufen ausschließen
+----------------------------------------------------------------------------------
+A - Wenn der Titel einer Sendung in die Ignorierliste übernommen werden soll
+Falls eine Sendung (z.B. eine Serie) künftig ignoriert werden soll, muss der rote Aufnahmestatus (falls in rot angezeigt, ist ja abhängig vom Aufnahmefenster im Menü) auf Grün gesetzt werden, dadurch wird der Aufnahmetimer gelöscht. Danach dann die Sendung per Taste 0 auf Grau setzen. Damit diese Sendung künftig immer ignoriert wird jetzt die Taste Grün (Ignorierliste) betätigen. Der Sendetitel wird jetzt in der Ignorierliste angezeigt. Abschließend per OK die Sendung auf Plus setzen und damit von künftigen Timerdurchläufen ausschließen.
+
+B - Jederzeit ist im Hauptscreen des Plugins per Taste Grün (Ignorierliste) das manuelle eintragen von auszuschließenden Begriffen - Titeln, einzelnen Wörtern etc. in der aufgerufenen Ignorierliste durch "Hinzufügen" möglich.
+
+-----------------------------------------------
+Kurz-Anleitung für Fortgeschrittene
+-----------------------------------------------
+Starte das Plugin und wähle mit "rot" Deine Sender aus. In der Senderliste kannst Du auch gleich mit "Grün" prüfen, ob die Sender in Deiner Favoritenliste gefunden wurden. Danach noch die Kategorien auswählen und dann mit "Menü" in die Einstellungen gehen. Dort noch ein paar Werte Deinen Wünschen nach anpassen und die EPG/Info Taste für ein manuelles Datenbankupdate drücken. Danach solltest Du Sendungen in der Hauptliste vorfinden.

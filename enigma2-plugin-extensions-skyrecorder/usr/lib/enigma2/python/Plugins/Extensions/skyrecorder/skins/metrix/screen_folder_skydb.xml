@@ -1,0 +1,22 @@
+<!-- skyrecorder_GenreSelect_v05 -->
+ <screen name="SkySelect_SkydbFolder_v05" position="center,center" size="1280,720" title="Sky Anytime" flags="wfNoBorder">
+  <ePixmap position="0,0" size="1280,720" zPosition="-1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/metrix/images/bg-1280-nt.png" />
+  <widget source="global.CurrentTime" render="Label" position="840,23" size="300,54" font="Regular; 26" valign="center" halign="left" backgroundColor="#26181d20" transparent="1">
+    <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1160,23" size="100,54" font="Regular;26" valign="center" halign="center" backgroundColor="#26181d20" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.VideoPicture" render="Pig" position="913,78" size="328,186" zPosition="3" backgroundColor="transparent" />
+<eLabel position="39,69" size="1200,1" backgroundColor="#00ffffff" name="Seperator up" />
+<eLabel position="39,109" size="866,1" backgroundColor="#00ffffff" name="Seperator mid" />
+  <eLabel position="39,630" size="1200,2" backgroundColor="#00ffffff" transparent="0" zPosition="2" foregroundColor="#00ffffff" />
+<eLabel position="905,69" size="3,560" backgroundColor="#00ffffff" name="Seperator vertical" />
+  <eLabel position="912,77" size="330,188" backgroundColor="#00ffffff" zPosition="0" name="Videoback" />
+    <widget name="media" position="65,71" size="800,30" valign="top" font="Regular;22" transparent="1" backgroundColor="#26181d20" />
+    <widget name="folderlist" position="65,116" size="800,500" backgroundColor="#26181d20" scrollbarMode="showOnDemand" transparent="1" zPosition="1" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/metrix/images/sel30_1200.png" />
+<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/metrix/images/red.png" position="65,650" zPosition="1" size="40,36" alphatest="on" />
+<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/metrix/images/green.png" position="362,650" zPosition="1" size="40,36" alphatest="on" />
+    <eLabel text="Abbrechen" position="99,657" size="180,26" zPosition="1" font="Regular; 19" halign="left" backgroundColor="#26181d20" transparent="1" />
+  <eLabel text="Speichern" position="398,657" size="180,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="#26181d20" transparent="1" />
+  </screen>
