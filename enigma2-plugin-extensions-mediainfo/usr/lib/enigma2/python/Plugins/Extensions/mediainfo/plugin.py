@@ -507,7 +507,7 @@ def openMoviePlayerEventView(self):
 	else:
 		MoviePlayer.originalOpenEventView(self)
 		
-MoviePlayer.openEventView = openMoviePlayerEventView
+MoviePlayer.InfoPressed = openMoviePlayerEventView
 
 def autostart(reason, **kwargs):
 	downloadsfile = "/usr/lib/enigma2/python/Plugins/Extensions/mediainfo/downloads"
