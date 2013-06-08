@@ -67,6 +67,10 @@ config.plugins.MyMetrixMOD = ConfigSubsection()
 config.plugins.MetrixWeather = ConfigSubsection()
 
 				#General
+config.plugins.MyMetrixMOD.Image = ConfigSelection(default="main-custom-openatv", choices = [
+				("main-custom-openatv", _("openATV")),
+				("main-custom-openmips", _("openMips"))
+				])
 config.plugins.MyMetrixMOD.SkinColor = ConfigSelection(default="#00149baf", choices = [
 				("#00F0A30A", _("Amber")),
 				("#00825A2C", _("Brown")),
@@ -175,6 +179,7 @@ class MyMetrixMOD(ConfigListScreen, Screen):
 		self.PicLoad = ePicLoad()
 		self["helperimage"] = Pixmap()
 		list = []
+		list.append(getConfigListEntry(_("MetrixImage"), config.plugins.MyMetrixMOD.Image))
 		list.append(getConfigListEntry(_("MetrixColor"), config.plugins.MyMetrixMOD.SkinColor))
 		list.append(getConfigListEntry(_("----------------------------- MetrixWeather  --------------------------------"), ))
 		list.append(getConfigListEntry(_("MetrixWeather ID"), config.plugins.MetrixWeather.woeid))
@@ -281,7 +286,10 @@ class MyMetrixMOD(ConfigListScreen, Screen):
 			
 			###Main XML
 			self.appendSkinFile(self.daten + "main.xml")
-
+			
+			###custom-main XML
+			self.appendSkinFile(self.daten + config.plugins.MyMetrixMOD.Image.value + ".xml")
+			
 			xFile = open(self.dateiTMP, "w")
 			for xx in self.skin_lines:
 				xFile.writelines(xx)
