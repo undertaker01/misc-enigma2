@@ -6774,6 +6774,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="background20" transparent="1">
       <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
     </widget>
+    <widget name="menu" position="70,120" size="700,371" font="Regular;20" zPosition="3" itemHeight="24" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" foregroundColorSelected="white" />
     <widget source="list" render="Listbox" position="70,120" size="700,371" font="Regular;16" scrollbarMode="showOnDemand" transparent="1" backgroundColorSelected="background20" foregroundColorSelected="white">
       <convert type="TemplatedMultiContent">
 				{"template": [
