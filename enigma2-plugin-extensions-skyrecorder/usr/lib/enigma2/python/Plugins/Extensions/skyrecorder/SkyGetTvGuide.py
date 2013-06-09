@@ -739,14 +739,14 @@ class SkyGetTvGuide():
 			67: 'Disney Cinemagic HD', 68: 'MGM', 69: 'TNT Film', 70: 'Kinowelt TV', 71: 'kabel eins classics',
 			72: 'Heimatkanal', 73: 'Beate-Uhse.TV', 80: 'National Geographic', 81: 'National Geographic HD',
 			82: 'Discovery Channel', 83: 'Discovery Channel HD', 84: 'Spiegel Geschichte', 85: 'History Channel',
-			86: 'History Channel HD', 87: 'National Geopgraphic Wild', 88: 'National Geopgraphic Wild HD',
+			86: 'History Channel HD', 87: 'National Geographic Wild', 88: 'National Geographic Wild HD',
 			89: 'Biography Channel', 90: 'Disney Channel HD', 91: 'Disney Channel', 92: 'Disney Junior',
 			93: 'Disney XD', 94: 'Boomerang', 95: 'Cartoon Network (S)', 96: 'Junior', 97: 'Nicktoons (S)',
 			98: 'Goldstar TV', 99: 'Classica', 100: 'MTV Germany', 101: 'MTV Live HD', 102: 'Sky Select 1',
 			103: 'Sky Select 2', 104: 'Sky Select 3', 105: 'Sky Select 4', 106: 'Sky Select 5',
 			107: 'Sky Select 6', 108: 'Sky Select 7', 109: 'Sky Select 8', 110: 'Sky Select 9',
 			111: 'Sky Select Event A', 112: 'Sky Select Event B', 113: 'Sky Select HD', 114: 'sportdigital',
-			115: 'Syfy HD', 116: '13th Street HD'
+			115: 'Syfy HD', 116: '13th Street HD', 117: 'E! Entertainm. HD', 160: 'MGM HD'
 			}
 		
 		return sky_stationIds

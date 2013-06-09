@@ -40,9 +40,13 @@ except Exception:
 	connection.commit()
 	
 try:
+	curser.execute("""DELETE from genre WHERE genre='Wrestling'""")
+	connection.commit()
 	curser.execute("""INSERT OR IGNORE INTO genre (id_genre,genre,status) values (61,'Wrestling','False')""")
 	connection.commit()
 	curser.execute("""INSERT OR IGNORE INTO genregroup (id_genre,id_groups) values (61,4)""")
+	connection.commit()
+	curser.execute("""DELETE from genre WHERE genre='Erotikfilm'""")
 	connection.commit()
 	curser.execute("""INSERT OR IGNORE INTO genre (id_genre,genre,status) values (62,'Erotikfilm','True')""")
 	connection.commit()
@@ -50,6 +54,19 @@ try:
 	connection.commit()
 except Exception:
 	print "$INFO_PREFIX WARNING: could not update table 'genre'"
+	
+try:
+	curser.execute("""DELETE from channel WHERE channel='MGM HD'""")
+	connection.commit()
+	curser.execute("""INSERT OR IGNORE INTO channel (channel,channel_stb,status,position,channel_id_sky) values ('MGM HD','MGM HD','False',0,160)""")
+	connection.commit()
+	curser.execute("""DELETE from channel WHERE channel='E! Entertainm. HD'""")
+	connection.commit()
+	curser.execute("""INSERT OR IGNORE INTO channel (channel,channel_stb,status,position,channel_id_sky) values ('E! Entertainm. HD','E! Entertainm. HD','False',0,117)""")
+	connection.commit()
+except Exception:
+	print "$INFO_PREFIX WARNING: could not update table 'channel'"	
+	
 EOF
 
 echo "$INFO_PREFIX update done"
