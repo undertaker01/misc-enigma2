@@ -7055,39 +7055,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <eLabel text="Exit" position="105,637" size="200,26" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
     <eLabel text="Save" position="395,637" size="200,26" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
   </screen>
-  <screen name="HddMount" position="0,0" size="1280,720" title="HddMount" flags="wfNoBorder" backgroundColor="background90">
-    <eLabel name="new eLabel" position="40,25" zPosition="-10" size="1205,650" backgroundColor="background20" transparent="0" />
-    <eLabel text="Mount Manager" position="70,47" size="800,43" font="Regular;35" backgroundColor="background20" transparent="1" />
-    <ePixmap position="920,230" size="256,256" zPosition="2" pixmap="MetrixHD_MOD/icons/setup.png" transparent="1" />
-    <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="background20" transparent="1">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="background20" transparent="1">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <widget name="menu" position="70,120" size="700,371" font="Regular;20" zPosition="3" itemHeight="24" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" foregroundColorSelected="white" />
-    <widget source="list" render="Listbox" position="70,120" size="700,371" font="Regular;16" scrollbarMode="showOnDemand" transparent="1" backgroundColorSelected="background20" foregroundColorSelected="white">
-      <convert type="TemplatedMultiContent">
-				{"template": [
-				 MultiContentEntryText(pos = (90, 0), size = (600, 30), font=0, text = 0),
-				 MultiContentEntryText(pos = (110, 30), size = (600, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
-				 MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (80, 80), png = 2),
-				],
-				"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
-				"itemHeight": 85
-				}
-			</convert>
-    </widget>
-    <widget name="lab1" zPosition="2" position="126,129" size="600,40" font="Regular;22" halign="center" transparent="1" />
-    <ePixmap pixmap="MetrixHD_MOD/buttons/red.png" position=" 70,635" size="30,40" alphatest="blend" />
-    <ePixmap pixmap="MetrixHD_MOD/buttons/green.png" position="360,635" size="30,40" alphatest="blend" />
-    <ePixmap pixmap="MetrixHD_MOD/buttons/yellow.png" position="650,635" size="30,40" alphatest="blend" />
-    <ePixmap pixmap="MetrixHD_MOD/buttons/blue.png" position="940,635" size="30,40" alphatest="blend" />
-    <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
-    <widget name="key_green" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
-    <widget name="key_yellow" position="685,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
-    <widget name="key_blue" position="975,637" size="260,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
-  </screen>
   <screen name="DevicePanelConf" position="0,0" size="1280,720" title="DevicePanelConf" backgroundColor="background90" flags="wfNoBorder">
     <eLabel name="new eLabel" position="40,25" zPosition="-10" size="1205,650" backgroundColor="background20" transparent="0" />
     <ePixmap pixmap="MetrixHD_MOD/icons/setup.png" position="920,230" size="256,256" zPosition="2" transparent="1" />
@@ -7915,4 +7882,38 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget source="blue" render="Label" position="975,637" size="260,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" transparent="1" />
     <ePixmap position="920,230" size="256,256" zPosition="2" pixmap="MetrixHD_MOD/icons/setup.png" transparent="1" />
   </screen>
+<!-- ### main-custom-openatv START -->
+	<screen name="HddMount" position="0,0" size="1280,720" title="HddMount" flags="wfNoBorder" backgroundColor="background90">
+    <eLabel name="new eLabel" position="40,25" zPosition="-10" size="1205,650" backgroundColor="background20" transparent="0" />
+    <eLabel text="Mount Manager" position="70,47" size="800,43" font="Regular;35" backgroundColor="background20" transparent="1" />
+    <ePixmap position="920,230" size="256,256" zPosition="2" pixmap="MetrixHD_MOD/icons/setup.png" transparent="1" />
+    <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="background20" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="background20" transparent="1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+    </widget>
+    <widget source="list" render="Listbox" position="70,120" size="700,371" font="Regular;16" scrollbarMode="showOnDemand" transparent="1" backgroundColorSelected="background20" foregroundColorSelected="white">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+				 MultiContentEntryText(pos = (90, 0), size = (600, 30), font=0, text = 0),
+				 MultiContentEntryText(pos = (110, 30), size = (600, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (80, 80), png = 2),
+				],
+				"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+				"itemHeight": 85
+				}
+			</convert>
+    </widget>
+    <widget name="lab1" zPosition="2" position="126,129" size="600,40" font="Regular;22" halign="center" transparent="1" />
+    <ePixmap pixmap="MetrixHD_MOD/buttons/red.png" position=" 70,635" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="MetrixHD_MOD/buttons/green.png" position="360,635" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="MetrixHD_MOD/buttons/yellow.png" position="650,635" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="MetrixHD_MOD/buttons/blue.png" position="940,635" size="30,40" alphatest="blend" />
+    <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
+    <widget name="key_green" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
+    <widget name="key_yellow" position="685,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
+    <widget name="key_blue" position="975,637" size="260,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
+  </screen>
+<!-- ### main-custom-openatv END -->
 </skin>
