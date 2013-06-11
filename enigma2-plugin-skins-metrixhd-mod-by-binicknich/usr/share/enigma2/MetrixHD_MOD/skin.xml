@@ -7660,7 +7660,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 				}
       </convert>
     </widget>
-    <ePixmap pixmap="MetrixHD_MOD/buttons/key_exit.png" alphatest="off" position="673,578" size="30,29" zPosition="3" transparent="1" />
+    <ePixmap pixmap="MetrixHD_MOD/buttons/key_exit.png" alphatest="on" position="673,578" size="30,29" zPosition="3" transparent="0" />
     <eLabel text="Cancel" backgroundColor="background20" font="RegularLight; 22" halign="left" position="718,577" size="220,30" transparent="1" zPosition="1" foregroundColor="white" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/key_ok.png" alphatest="on" position="370,578" size="30,29" zPosition="3" transparent="1" />
     <eLabel text="OK" backgroundColor="background20" font="RegularLight; 22" halign="left" position="415,577" size="220,30" transparent="1" zPosition="3" foregroundColor="white" />
