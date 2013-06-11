@@ -3427,7 +3427,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget source="session.CurrentService" render="Label" position="35,647" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background20" shadowColor="black" shadowOffset="-1,-1" transparent="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
-    <widget source="session.CurrentService" render="Progress" position="281,655" size="800,12" backgroundColor="background20" borderWidth="2" borderColor="grey" transparent="1">
+    <widget source="session.CurrentService" render="Progress" position="241,655" size="800,12" backgroundColor="background20" borderWidth="2" borderColor="grey" transparent="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1175,645" size="100,28" font="Regular;24" halign="center" valign="center" backgroundColor="background20" transparent="1">
@@ -3436,9 +3436,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget source="session.CurrentService" render="Label" position="907,684" size="150,24" font="Regular;20" halign="center" valign="center" backgroundColor="background20" transparent="1">
       <convert type="ServicePosition">Length</convert>
     </widget>
-    <widget name="chapterLabel" position="291,646" size="700,22" font="Regular;18" foregroundColor="yellow" backgroundColor="background20" transparent="1" />
-    <widget name="audioLabel" position="229,642" size="700,22" font="Regular;18" foregroundColor="yellow" backgroundColor="background20" transparent="1" />
-    <widget name="subtitleLabel" position="446,645" size="750,22" font="Regular;18" foregroundColor="yellow" backgroundColor="background20" transparent="1" />
+    <widget name="chapterLabel" position="291,573" size="700,22" font="Regular;18" foregroundColor="yellow" backgroundColor="background20" transparent="1" />
+    <widget name="audioLabel" position="291,598" size="700,22" font="Regular;18" foregroundColor="yellow" backgroundColor="background20" transparent="1" />
+    <widget name="subtitleLabel" position="291,623" size="700,22" font="Regular;18" foregroundColor="yellow" backgroundColor="background20" transparent="1" />
     <eLabel name="new eLabel" position="0,570" zPosition="-2" size="1281,150" backgroundColor="background20" transparent="0" />
     <widget source="global.CurrentTime" render="Label" position="1063,36" size="190,80" font="Regular; 55" halign="left" backgroundColor="background20" transparent="1" valign="top">
       <convert type="ClockToText">Default</convert>
