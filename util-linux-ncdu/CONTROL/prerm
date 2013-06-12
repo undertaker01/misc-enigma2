@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Removing ncdu from the system ..."
+exit 0

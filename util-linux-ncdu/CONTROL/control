@@ -1,0 +1,10 @@
+Package: util-linux-ncdu
+Version: 1.8-1r0
+Description: ncurses based viewer for du
+Architecture: mipsel
+Section: base
+Priority: optional
+Maintainer: arn354 <arn354@email.de>
+Homepage: 
+Depends: libc6
+Source:

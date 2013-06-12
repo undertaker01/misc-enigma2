@@ -1,0 +1,4 @@
+#!/bin/sh
+rm -rf /var/lib/vnstat > /dev/null 2>&1
+echo "Removing vnstat from the system ..."
+exit 0

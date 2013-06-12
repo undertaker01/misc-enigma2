@@ -1,0 +1,11 @@
+#!/bin/sh
+chmod 755 /usr/bin/vnstat > /dev/null 2>&1
+chmod 755 /usr/sbin/vnstatd > /dev/null 2>&1
+chmod 755 /etc/init.d/vnstat > /dev/null 2>&1
+echo "********************************************************"
+echo "*  vnstat successfully installed!                      *"
+echo "*                                                      *"
+echo "*  vnstat is a linux-binary to watch networktraffic    *"
+echo "*  http://www.gigablue-support.org           arn354    *"
+echo "********************************************************"
+exit 0

@@ -1,0 +1,10 @@
+Package: util-linux-vnstat
+Version: 1.11-1r0
+Description: linux-binary to watch networktraffic 
+Architecture: mipsel
+Section: base
+Priority: optional
+Maintainer: arn354 <arn354@email.de>
+Homepage: 
+Depends: libc6
+Source:

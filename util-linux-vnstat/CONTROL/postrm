@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "********************************************************"
+echo "*  vnstat successfully removed!                        *"
+echo "*                                                      *"
+echo "*  http://www.gigablue-support.org           arn354    *"
+echo "********************************************************"
+exit 0
