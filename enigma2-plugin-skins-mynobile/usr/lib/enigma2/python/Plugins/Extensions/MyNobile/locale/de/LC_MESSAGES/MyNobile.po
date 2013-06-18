@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MyNobile\n"
+"POT-Creation-Date: 2013-06-09 15:49+0100\n"
+"PO-Revision-Date: 2013-06-09 15:52+0100\n"
+"Last-Translator: \n"
+"Language-Team: arn354 <arn354@gigablue-support.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: \\usr\\lib\\enigma2\\python"
+"\\Plugins\\Extensions\\MyNobile\n"
+"X-Poedit-SearchPath-0: \\usr\\lib\\enigma2\\python"
+"\\Plugins\\Extensions\\MyNobile\n"
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:63
+msgid "openATV"
+msgstr ""
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:64
+msgid "openMips"
+msgstr ""
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:67
+msgid "Channellist left"
+msgstr "Kanalliste links"
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:68
+msgid "Channellist center"
+msgstr "Kanalliste mitte"
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:102
+msgid "NobileImage"
+msgstr ""
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:103
+msgid "Channellist Position"
+msgstr "Position der Kanaliste"
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:146
+msgid "Do you really want to reboot now?"
+msgstr "Wollen Sie wirklich neustarten?"
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:147
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:187
+msgid "Restart GUI"
+msgstr "GUI neustarten"
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:150
+msgid "Information"
+msgstr "Information"
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:183
+msgid "Error creating Skin!"
+msgstr "Fehler beim Erstellen des Skins!"
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:186
+msgid ""
+"GUI needs a restart to apply the changed skin.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+"Die GUI muss neugestartet werden um die Einstellungen übernehmen zu können.\n"
+"\n"
+"Nach der Ersteinrichtung <Nobile> im Skin-Menü aktivieren!"
+
+#: \usr\lib\enigma2\python\Plugins\Extensions\MyNobile/plugin.py:215
+msgid "Configuration tool for Nobile mod by satinfo"
+msgstr "Konfigurationstool für Nobile mod by satinfo"
