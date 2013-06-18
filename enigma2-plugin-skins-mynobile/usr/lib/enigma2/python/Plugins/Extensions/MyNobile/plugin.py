@@ -67,7 +67,12 @@ config.plugins.MyNobile.ChannelSelection = ConfigSelection(default="channelselec
 				("channelselection-channel-left", _("Channellist left")),
 				("channelselection-channel-center", _("Channellist center"))
 				])
-
+config.plugins.MyNobile.ChannelSelectionFontSize = ConfigSelection(default='serviceItemHeight="28" serviceNumberFont="Regular;18" serviceNameFont="Bold;20" serviceInfoFont="Regular;20"', choices = [
+				('serviceItemHeight="28" serviceNumberFont="Regular;18" serviceNameFont="Bold;20" serviceInfoFont="Regular;20"', _("Default")),
+				('serviceItemHeight="22" serviceNumberFont="Regular;16" serviceNameFont="Bold;18" serviceInfoFont="Regular;18"', _("50 Zoll <")),
+				('serviceItemHeight="34" serviceNumberFont="Regular;24" serviceNameFont="Bold;26" serviceInfoFont="Regular;26"', _("< 40 Zoll"))
+				])
+				
 class MyNobile(ConfigListScreen, Screen):
 	skin = """
   <screen name="MyNobile-Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="#90000000">
@@ -101,7 +106,8 @@ class MyNobile(ConfigListScreen, Screen):
 		list = []
 		list.append(getConfigListEntry(_("NobileImage"), config.plugins.MyNobile.Image))
 		list.append(getConfigListEntry(_("Channellist Position"), config.plugins.MyNobile.ChannelSelection))
-		
+		list.append(getConfigListEntry(_("Channellist Font Size"), config.plugins.MyNobile.ChannelSelectionFontSize))
+				
 		ConfigListScreen.__init__(self, list)
 		self["actions"] = ActionMap(["OkCancelActions","DirectionActions", "InputActions", "ColorActions"], {"left": self.keyLeft,"down": self.keyDown,"up": self.keyUp,"right": self.keyRight,"red": self.exit,"yellow": self.reboot, "blue": self.showInfo, "green": self.save,"cancel": self.exit}, -1)
 		self.onLayoutFinish.append(self.UpdatePicture)
@@ -175,6 +181,7 @@ class MyNobile(ConfigListScreen, Screen):
 			o = open(self.skinfile,"w")
 			for line in open(self.skinfileTMP):
 			#	line = line.replace("#00149bae", config.plugins.MyNobile.SkinColor.value )
+				line = line.replace('serviceItemHeight="28" serviceNumberFont="Regular;18" serviceNameFont="Bold;20" serviceInfoFont="Regular;20"', config.plugins.MyNobile.ChannelSelectionFontSize.value )
 				o.write(line)
 			o.close()
 			system('rm -rf ' + self.skinfileTMP)
