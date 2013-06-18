@@ -1,0 +1,4 @@
+#!/bin/sh
+TYPE=$(cat /proc/stb/info/gbmodel)
+MODEL=$(cat /proc/stb/info/model)
+echo "             MyNobile successful installed on $MODEL  $TYPE           "

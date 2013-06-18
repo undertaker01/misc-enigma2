@@ -1,0 +1,4 @@
+#!/bin/sh
+TYPE=$(cat /proc/stb/info/gbmodel)
+MODEL=$(cat /proc/stb/info/model)
+echo "             MyNobile will be removed from $MODEL $TYPE            "

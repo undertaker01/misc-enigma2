@@ -1,0 +1,101 @@
+<skin>
+	<!-- ### header START-->
+	<!-- Nobile Skin Mod by Satinfo -->
+	<output id="0">
+		<resolution xres="1280" yres="720" bpp="32" />
+	</output>
+	<colors>
+		<color name="background" value="#00000000" />
+		<color name="background_tux" value="#00e8e8e8" />
+		<color name="background2" value="#0038435a" />
+		<color name="backtop" value="#001b2c47" />
+		<color name="black" value="#00000000" />
+		<color name="blue" value="#0021b0cf" />
+		<color name="dark" value="#00294a6b" />
+		<color name="darkgrey" value="#00777777" />
+		<color name="darkgrey2" value="#00333333" />
+		<color name="darkgrey3" value="#00181818" />
+		<color name="EMCFinished" value="#0046d93a" />
+		<color name="EMCRecording" value="#009f1313" />
+		<color name="EMCWatching" value="#003486f4" />
+		<color name="foreground" value="#00dddddd" />
+		<color name="green" value="#00389416" />
+		<color name="grey" value="#00bbbbbb" />
+		<color name="iconblue" value="#00345c98" />
+		<color name="rds_text_bg" value="#00003258" />
+		<color name="red" value="#00f23d21" />
+		<color name="rssviewtop" value="#45005050" />
+		<color name="transparent" value="#ffffffff" />
+		<color name="transpBlack" value="#80000000" />
+		<color name="transpWhite" value="#77ffffff" />
+		<color name="transpyellow" value="#33bab329" />
+		<color name="un1f771f" value="#001f771f" />
+		<color name="un20224f" value="#0020224f" />
+		<color name="un220a0a0a" value="#220a0a0a" />
+		<color name="un2f4974" value="#002f4974" />
+		<color name="un4e5a74" value="#004e5a74" />
+		<color name="un5678a4" value="#005678a4" />
+		<color name="un62e3c" value="#00062e3c" />
+		<color name="un6c" value="#0000006c" />
+		<color name="un800000" value="#00800000" />
+		<color name="un808888" value="#00808888" />
+		<color name="una0a0a0" value="#00a0a0a0" />
+		<color name="unbab329" value="#00bab329" />
+		<color name="undcaaaa" value="#00dcaaaa" />
+		<color name="undcdcdc" value="#00dcdcdc" />
+		<color name="unff0000" value="#00ff0000" />
+		<color name="unff000000" value="#ff000000" />
+		<color name="white" value="#00ffffff" />
+		<color name="yellow" value="#00e5b243" />
+	</colors>
+	<fonts>
+		<font filename="/usr/share/enigma2/Nobile/fonts/lcd.ttf" name="LCD" scale="100" />
+		<font filename="/usr/share/enigma2/Nobile/fonts/Roboto-Bold.ttf" name="Console" scale="100" />
+		<font filename="/usr/share/enigma2/Nobile/fonts/nmsbd.ttf" name="Arial" scale="100" />
+		<font filename="/usr/share/enigma2/Nobile/fonts/Roboto-Bold.ttf" name="Bold" scale="100" />
+		<font filename="/usr/share/enigma2/Nobile/fonts/Roboto-Regular.ttf" name="Regular" scale="100" />
+		<font filename="/usr/share/enigma2/Nobile/fonts/Roboto-Italic.ttf" name="Italic" scale="100" />
+		<font filename="/usr/share/enigma2/Nobile/fonts/Symbols.ttf" name="Symbols" scale="100" />
+		<font filename="/usr/share/enigma2/Nobile/fonts/Roboto-Regular.ttf" name="EMCRegularFont" scale="100" />
+	</fonts>
+	<subtitles>
+		<sub name="Subtitle_TTX" font="Regular;30" shadowColor="#40101010" shadowOffset="3,3" />
+		<sub name="Subtitle_Regular" font="Regular;30" foregroundColor="undcdcdc" shadowColor="#40101010" shadowOffset="3,3" />
+		<sub name="Subtitle_Bold" font="Bold;30" foregroundColor="undcdcdc" shadowColor="#40101010" shadowOffset="3,3" />
+		<sub name="Subtitle_Italic" font="Italic;30" foregroundColor="undcaaaa" shadowColor="#40101010" shadowOffset="3,3" />
+	</subtitles>
+	<windowstyle type="skinned" id="0">
+		<title offset="15,4" font="Regular;26" />
+		<color name="Background" color="black" />
+		<color name="LabelForeground" color="white" />
+		<color name="ListboxBackground" color="black" />
+		<color name="ListboxForeground" color="white" />
+		<color name="ListboxSelectedBackground" color="un62e3c" />
+		<color name="ListboxSelectedForeground" color="white" />
+		<color name="ListboxMarkedBackground" color="un5678a4" />
+		<color name="ListboxMarkedForeground" color="unff0000" />
+		<color name="ListboxMarkedAndSelectedBackground" color="un5678a4" />
+		<color name="ListboxMarkedAndSelectedForeground" color="un800000" />
+		<color name="WindowTitleForeground" color="black" />
+		<color name="WindowTitleBackground" color="grey" />
+		<borderset name="bsListboxEntry">
+			<pixmap pos="bpTop" filename="Nobile/menu/bs-list.png" />
+			<pixmap pos="bpBottom" filename="Nobile/menu/bs-list.png" />
+		</borderset>
+	</windowstyle>
+	<!-- Main screen colors (id=1 LCD) -->
+	<windowstyle type="skinned" id="1">
+		<color name="Background" color="un6c" />
+		<color name="LabelForeground" color="una0a0a0" />
+		<color name="ListboxBackground" color="un6c" />
+		<color name="ListboxForeground" color="una0a0a0" />
+		<color name="ListboxSelectedBackground" color="un6c" />
+		<color name="ListboxSelectedForeground" color="una0a0a0" />
+		<color name="ListboxMarkedBackground" color="un6c" />
+		<color name="ListboxMarkedForeground" color="una0a0a0" />
+		<color name="ListboxMarkedAndSelectedBackground" color="un6c" />
+		<color name="ListboxMarkedAndSelectedForeground" color="una0a0a0" />
+		<color name="WindowTitleForeground" color="una0a0a0" />
+		<color name="WindowTitleBackground" color="un6c" />
+	</windowstyle>  
+  <!-- ### header END-->

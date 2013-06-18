@@ -1,0 +1,57 @@
+	<!-- ### channelselection START-->
+	<screen name="ChannelSelection" position="0,0" size="1280,720" title="" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Nobile/menu/mainbg4.png" />
+		<widget source="Title" render="Label" position="15,10" size="410,30" font="Bold; 23" halign="left" foregroundColor="white" backgroundColor="darkgrey" transparent="1" zPosition="2" />
+		<widget source="global.CurrentTime" render="Label" position="796,10" size=" 80,28" font="Bold;25" foregroundColor="background_tux" backgroundColor="darkgrey2" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget name="list" foregroundColor="darkgrey2" backgroundColor="grey" position="17,287" size="439,395" selectionPixmap="Nobile/menu/menusel_439_42.png" colorServiceDescription="darkgrey2" colorServiceDescriptionSelected="background_tux" picServiceEventProgressbar="Nobile/menu/progcl.png" colorEventProgressbarBorder="darkgrey" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="darkgrey" serviceItemHeight="28" serviceNumberFont="Regular;18" serviceNameFont="Bold;20" serviceInfoFont="Regular;20" transparent="1" />
+		<widget source="ServiceEvent" render="Label" position="932,10" size="323,30" font="Bold; 23" halign="left" foregroundColor="white" backgroundColor="darkgrey2" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="475,48" size="446,24" font="Bold;20" halign="center" backgroundColor="grey" transparent="1" foregroundColor="darkgrey3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="535,72" size="319,22" font="Regular;19" halign="center" backgroundColor="grey" transparent="1" foregroundColor="darkgrey2">
+			<convert type="EventName">Description</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="462,88" size="67,25" font="Bold; 20" halign="right" backgroundColor="grey" transparent="1" foregroundColor="darkgrey3">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">
+			</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="865,88" size="75,25" font="Bold; 20" halign="left" backgroundColor="grey" transparent="1" foregroundColor="darkgrey3">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">
+			</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Progress" position="534,97" size="328,8" pixmap="Nobile/menu/progcs2.png" transparent="1" zPosition="2" borderWidth="2" borderColor="darkgrey">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="476,117" size="445,245" font="Regular; 19" foregroundColor="darkgrey2" backgroundColor="grey" transparent="1">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<ePixmap pixmap="Nobile/buttons/red.png" position="20,691" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="Nobile/buttons/green.png" position="290,691" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="Nobile/buttons/yellow.png" position="560,691" size="35,27" alphatest="blend" />
+		<ePixmap pixmap="Nobile/buttons/blue.png" position="835,691" size="35,27" alphatest="blend" />
+		<widget name="key_red" position="55,692" size="200,26" zPosition="1" font="Regular;18" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget name="key_green" position="325,692" size="200,26" zPosition="1" font="Regular;18" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget name="key_yellow" position="595,692" size="200,26" zPosition="1" font="Regular;18" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<widget name="key_blue" position="870,692" size="200,26" zPosition="1" font="Regular;18" halign="left" foregroundColor="black" backgroundColor="grey" transparent="1" />
+		<ePixmap position="1115,693" size="36,35" pixmap="Nobile/buttons/menu2.png" alphatest="blend" />
+		<widget source="session.VideoPicture" render="Pig" position="41,55" size="391,220" zPosition="3" backgroundColor="unff000000" />
+		<eLabel text="jetzt läuft:" position="474,10" size="180,30" font="Bold;23" halign="left" foregroundColor="white" backgroundColor="darkgrey" transparent="1" zPosition="2" />
+		<eLabel text="es folgt:" position="474,383" size="180,30" font="Bold;23" halign="left" foregroundColor="white" backgroundColor="darkgrey" transparent="1" zPosition="2" />
+		<widget source="ServiceEvent" render="SingleEpgListNobile" position="936,58" size="339,619" font="Regular;17" foregroundColor="darkgrey2" backgroundColor="grey" noWrap="1" transparent="1" />
+		<widget source="ServiceEvent" render="Label" position="475,421" zPosition="1" size="446,25" font="Bold; 20" halign="left" backgroundColor="grey" transparent="1" foregroundColor="darkgrey2">
+			<convert type="g16ServiceNameEventNobile">NextEvent</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="796,383" zPosition="1" size="80,28" font="Bold; 25" halign="left" backgroundColor="darkgrey2" transparent="1" foregroundColor="background_tux">
+			<convert type="g16ServiceNameEventNobile">StartTime</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="475,458" zPosition="1" size="446,223" font="Regular; 19" backgroundColor="grey" transparent="1" foregroundColor="darkgrey2">
+			<convert type="g16ServiceNameEventNobile">ExtendedDescription</convert>
+		</widget>
+	</screen>
+	<!-- ### channelselection END-->
