@@ -17,7 +17,7 @@
     <ePixmap pixmap="MetrixHD_MOD/buttons/green.png" position="618,630" size="30,40" alphatest="blend" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/yellow.png" position="820,630" size="30,40" alphatest="blend" />
     <ePixmap pixmap="MetrixHD_MOD/buttons/blue.png" position="1018,630" size="30,40" alphatest="blend" />
-    <ePixmap pixmap="MetrixHD_MOD/buttons/key_info2.png" position="1145,630" size="81,40" alphatest="blend" />
+    <ePixmap pixmap="MetrixHD_MOD/buttons/key_info2.png" position="1145,51" size="81,40" alphatest="blend" />
     <widget name="key_red" position="454,636" size="160,25" zPosition="1" font="Regular; 20" halign="left" backgroundColor="background20" transparent="1" />
     <widget name="key_green" position="654,636" size="160,25" zPosition="1" font="Regular; 20" halign="left" backgroundColor="background20" transparent="1" />
     <widget name="key_yellow" position="855,636" size="160,25" zPosition="1" font="Regular; 20" halign="left" backgroundColor="background20" transparent="1" />
