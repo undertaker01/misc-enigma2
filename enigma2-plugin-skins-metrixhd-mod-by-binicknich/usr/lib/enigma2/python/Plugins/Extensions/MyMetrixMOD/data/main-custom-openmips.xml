@@ -79,21 +79,22 @@
 		<widget name="key_blue" position="975,637" size="260,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
 	</screen>
 	<screen name="HddFastRemove" position="center,center" size="840,570" title="Hard Drive Fast Umount" flags="wfNoBorder">
-		<widget source="global.CurrentTime" render="Label" position="40,25" size=" 80,25" font="Regular;23" backgroundColor="black" transparent="1">
+		<eLabel name="new eLabel" position="40,25" zPosition="-10" size="1205,650" backgroundColor="background20" transparent="0" />
+		<eLabel text="Hard Drive Fast Remove" position="70,47" size="800,43" font="Regular;35" backgroundColor="background20" transparent="1" />
+		<ePixmap position="920,230" size="256,256" zPosition="2" pixmap="MetrixHD_MOD/icons/setup.png" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="background20" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="120,25" size="140,25" font="Regular;23" backgroundColor="black" transparent="1">
-			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		<widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="background20" transparent="1">
+			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
 		</widget>
-		<ePixmap position="0,0" zPosition="-10" size="840,570" pixmap="Nobile/menu/menubg.png" />
-		<widget source="menu" render="Listbox" position="30,60" size="780,400" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="Nobile/menu/menusel_800_50.png" transparent="1">
+		<widget source="menu" render="Listbox" position="70,80" size="780,400" scrollbarMode="showOnDemand" selectionPixmap="MetrixHD_MOD/p_bar.png" transparent="1" backgroundColorSelected="background20" foregroundColorSelected="white">
 			<convert type="TemplatedMultiContent">{"template": [MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),MultiContentEntryText(pos = (65, 3), size = (190, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),MultiContentEntryText(pos = (165, 27), size = (290, 38), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),],"fonts": [gFont("Regular", 22), gFont("Regular", 18)],"itemHeight": 50}</convert>
 		</widget>
-		<widget source="Title" render="Label" position="115,490" size="700,45" font="Bold; 30" halign="right" foregroundColor="black" backgroundColor="white" transparent="1" />
-		<ePixmap position="15,525" size="35,27" pixmap="Nobile/buttons/red.png" alphatest="blend" />
-		<ePixmap position="615,525" size="35,27" pixmap="Nobile/buttons/blue.png" alphatest="blend" />
-		<widget source="key_red" render="Label" position="50,526" zPosition="1" size="200,26" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="grey" />
-		<widget source="key_blue" render="Label" position="650,526" zPosition="1" size="200,26" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="grey" />
+		<ePixmap pixmap="MetrixHD_MOD/buttons-default/red.png" position=" 70,635" size="30,40" alphatest="blend" />
+		<ePixmap pixmap="MetrixHD_MOD/buttons-default/blue.png" position="940,635" size="30,40" alphatest="blend" />
+		<widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
+		<widget name="key_blue" position="975,637" size="260,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="background20" foregroundColor="white" transparent="1" />
 	</screen>
 	<screen name="HddPartitions" position="0,0" size="1280,720" title="Hard Drive Partitions" flags="wfNoBorder" backgroundColor="background90">
 		<eLabel name="new eLabel" position="40,25" zPosition="-10" size="1205,650" backgroundColor="background20" transparent="0" />
@@ -128,7 +129,7 @@
 			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
 		</widget>
 		<widget name="message" position="70,55" size="780,35" font="Regular;30" valign="center" transparent="1" foregroundColor="white" />
-		<widget source="menu" render="Listbox" position="70,120" size="780,320" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="Nobile/menu/menusel_800_50.png" transparent="1">
+		<widget source="menu" render="Listbox" position="70,120" size="780,320" scrollbarMode="showOnDemand" selectionPixmap="MetrixHD_MOD/p_bar.png" transparent="1" backgroundColorSelected="background20" foregroundColorSelected="white">
 			<convert type="TemplatedMultiContent">{"template": [MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),MultiContentEntryText(pos = (65, 10), size = (425, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),],"fonts": [gFont("Regular", 22)],"itemHeight": 48}</convert>
 		</widget>
 		<applet type="onLayoutFinish">\n# this should be factored out into some helper code, but currently demonstrates applets.\nfrom enigma import eSize, ePoint\n\norgwidth = self.instance.size().width()\norgheight = self.instance.size().height()\norgpos = self.instance.position()\ntextsize = self[&quot;message&quot;].getSize()\n\n# y size still must be fixed in font stuff...\nif self[&quot;message&quot;].getText() != &quot;&quot;:textsize = (textsize[0] + 80, textsize[1] + 60)\nelse:textsize = (textsize[0] + 80, textsize[1] + 4)\n\ncount = len(self.list)\nif count &gt; 7:count = 7\noffset = 48 * count\nwsizex = textsize[0] + 80\nwsizey = textsize[1] + offset + 30\n\nif (460 &gt; wsizex):wsizex = 460\nwsize = (wsizex, wsizey)\n\n# resize\nself.instance.resize(eSize(*wsize))\n\n# resize label\nself[&quot;message&quot;].instance.resize(eSize(*textsize))\n\n# move list\nlistsize = (wsizex - 30, 48 * count)\nself[&quot;menu&quot;].downstream_elements.downstream_elements.instance.move(ePoint(10, textsize[1] + 10))\nself[&quot;menu&quot;].downstream_elements.downstream_elements.instance.resize(eSize(*listsize))\n\n# center window\nnewwidth = wsize[0]\nnewheight = wsize[1]\nself.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()  + (orgheight - newheight)/2))</applet>
