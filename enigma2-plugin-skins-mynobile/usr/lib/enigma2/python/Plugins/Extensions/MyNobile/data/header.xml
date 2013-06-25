@@ -79,8 +79,8 @@
 		<color name="WindowTitleForeground" color="black" />
 		<color name="WindowTitleBackground" color="grey" />
 		<borderset name="bsListboxEntry">
-			<pixmap pos="bpTop" filename="Nobile/menu/bs-list.png" />
-			<pixmap pos="bpBottom" filename="Nobile/menu/bs-list.png" />
+			<pixmap pos="bpTop" filename="MyNobile/menu/bs-list.png" />
+			<pixmap pos="bpBottom" filename="MyNobile/menu/bs-list.png" />
 		</borderset>
 	</windowstyle>
 	<!-- Main screen colors (id=1 LCD) -->

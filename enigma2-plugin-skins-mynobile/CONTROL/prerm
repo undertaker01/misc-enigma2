@@ -1,4 +1,6 @@
-#!/bin/sh
+﻿#!/bin/sh
 TYPE=$(cat /proc/stb/info/gbmodel)
 MODEL=$(cat /proc/stb/info/model)
-echo "             MyNobile will be removed from $MODEL $TYPE            "
+echo "***************************************************************"
+echo "  Skin MyNobile by satinfo & arn354 will be removed from       "
+echo "                      $MODEL $TYPE                             "

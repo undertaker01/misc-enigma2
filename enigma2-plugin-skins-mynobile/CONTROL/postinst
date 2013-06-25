@@ -1,4 +1,9 @@
-#!/bin/sh
+﻿#!/bin/sh
 TYPE=$(cat /proc/stb/info/gbmodel)
 MODEL=$(cat /proc/stb/info/model)
-echo "             MyNobile successful installed on $MODEL  $TYPE           "
+echo "***************************************************************"
+echo "  Skin MyNobile by satinfo & arn354 successfully installed on  "
+echo "                      $MODEL $TYPE                             "
+echo "***************************************************************"
+echo " You should restart your $MODEL $TYPE now..."
+echo "***************************************************************"

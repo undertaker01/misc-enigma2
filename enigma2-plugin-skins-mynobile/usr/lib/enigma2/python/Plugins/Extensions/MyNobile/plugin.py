@@ -72,7 +72,7 @@ config.plugins.MyNobile.ChannelSelectionFontSize = ConfigSelection(default='serv
 				('serviceItemHeight="22" serviceNumberFont="Regular;16" serviceNameFont="Bold;18" serviceInfoFont="Regular;18"', _("50 Zoll <")),
 				('serviceItemHeight="34" serviceNumberFont="Regular;24" serviceNameFont="Bold;26" serviceInfoFont="Regular;26"', _("< 40 Zoll"))
 				])
-				
+
 class MyNobile(ConfigListScreen, Screen):
 	skin = """
   <screen name="MyNobile-Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="#90000000">
@@ -96,8 +96,8 @@ class MyNobile(ConfigListScreen, Screen):
 		self.skin_lines = []
 		Screen.__init__(self, session)
 		self.session = session
-		self.skinfile = "/usr/share/enigma2/Nobile/skin.xml"
-		self.skinfileTMP = "/usr/share/enigma2/Nobile/skin.xml.tmp"
+		self.skinfile = "/usr/share/enigma2/MyNobile/skin.xml"
+		self.skinfileTMP = "/usr/share/enigma2/MyNobile/skin.xml.tmp"
 		self.skindata = "/usr/lib/enigma2/python/Plugins/Extensions/MyNobile/data/"
 		self.picPath = picPath
 		self.Scale = AVSwitch().getFramebufferScale()
@@ -107,11 +107,11 @@ class MyNobile(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("NobileImage"), config.plugins.MyNobile.Image))
 		list.append(getConfigListEntry(_("Channellist Position"), config.plugins.MyNobile.ChannelSelection))
 		list.append(getConfigListEntry(_("Channellist Font Size"), config.plugins.MyNobile.ChannelSelectionFontSize))
-				
+
 		ConfigListScreen.__init__(self, list)
 		self["actions"] = ActionMap(["OkCancelActions","DirectionActions", "InputActions", "ColorActions"], {"left": self.keyLeft,"down": self.keyDown,"up": self.keyUp,"right": self.keyRight,"red": self.exit,"yellow": self.reboot, "blue": self.showInfo, "green": self.save,"cancel": self.exit}, -1)
 		self.onLayoutFinish.append(self.UpdatePicture)
-		
+
 	def GetPicturePath(self):
 		try:
 			returnValue = self["config"].getCurrent()[1].value
@@ -119,39 +119,39 @@ class MyNobile(ConfigListScreen, Screen):
 			return path
 		except:
 			return "/usr/lib/enigma2/python/Plugins/Extensions/MyNobile/images/nohelperimage.jpg"
-		
+
 	def UpdatePicture(self):
 		self.PicLoad.PictureData.get().append(self.DecodePicture)
 		self.onLayoutFinish.append(self.ShowPicture)
-	
+
 	def ShowPicture(self):
 		self.PicLoad.setPara([self["helperimage"].instance.size().width(),self["helperimage"].instance.size().height(),self.Scale[0],self.Scale[1],0,1,"#002C2C39"])
 		self.PicLoad.startDecode(self.GetPicturePath())
-		
+
 	def DecodePicture(self, PicInfo = ""):
 		ptr = self.PicLoad.getData()
-		self["helperimage"].instance.setPixmap(ptr)	
+		self["helperimage"].instance.setPixmap(ptr)
 
-	def keyLeft(self):	
-		ConfigListScreen.keyLeft(self)	
+	def keyLeft(self):
+		ConfigListScreen.keyLeft(self)
 		self.ShowPicture()
 
 	def keyRight(self):
 		ConfigListScreen.keyRight(self)
 		self.ShowPicture()
-	
+
 	def keyDown(self):
 		self["config"].instance.moveSelection(self["config"].instance.moveDown)
 		self.ShowPicture()
-		
+
 	def keyUp(self):
 		self["config"].instance.moveSelection(self["config"].instance.moveUp)
 		self.ShowPicture()
-	
+
 	def reboot(self):
 		restartbox = self.session.openWithCallback(self.restartGUI,MessageBox,_("Do you really want to reboot now?"), MessageBox.TYPE_YESNO)
 		restartbox.setTitle(_("Restart GUI"))
-		
+
 	def showInfo(self):
 		self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
 
@@ -173,7 +173,7 @@ class MyNobile(ConfigListScreen, Screen):
 			self.appendSkinFile(self.skindata + config.plugins.MyNobile.ChannelSelection.value + ".xml")
 			###footer XML
 			self.appendSkinFile(self.skindata + "footer.xml")
-			
+
 			xFile = open(self.skinfileTMP, "w")
 			for xx in self.skin_lines:
 				xFile.writelines(xx)
@@ -196,7 +196,7 @@ class MyNobile(ConfigListScreen, Screen):
 	def appendSkinFile(self,appendFileName):
 		skFile = open(appendFileName, "r")
 		file_lines = skFile.readlines()
-		skFile.close()	
+		skFile.close()
 		for x in file_lines:
 			self.skin_lines.append(x)
 

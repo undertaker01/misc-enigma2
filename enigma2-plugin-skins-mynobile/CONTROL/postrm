@@ -1,14 +1,9 @@
-#!/bin/sh
+﻿#!/bin/sh
 TYPE=$(cat /proc/stb/info/gbmodel)
 MODEL=$(cat /proc/stb/info/model)
-rm -rf /usr/lib/enigma2/python/Components/Converter/g16ServiceNameEventNobile.pyo
-rm -rf /usr/lib/enigma2/python/Components/Converter/NobileCaidDisplay.pyo
-rm -rf /usr/lib/enigma2/python/Components/Converter/NobileSmartInfo.pyo
-rm -rf /usr/lib/enigma2/python/Components/Renderer/SingleEpgListNobile.pyo
-rm -rf /usr/lib/enigma2/python/Components/Renderer/PiconNobile.pyo
-rm -rf /usr/lib/enigma2/python/Components/Renderer/NobileCaids.pyo
-rm -rf /usr/share/enigma2/MyNobile
-rm -rf /usr/share/enigma2/skin_display96.xml
-echo "             Skin MyNobile by satinfo & arn354 successfully removed on $MODEL $TYPE        "
-echo "                           System is going to reboot now                          "
+echo "***************************************************************"
+echo "  Skin MyNobile by satinfo & arn354 successfully removed from  "
+echo "                      $MODEL $TYPE                             "
+echo "             System is going to reboot now...                  "
+echo "***************************************************************"
 reboot

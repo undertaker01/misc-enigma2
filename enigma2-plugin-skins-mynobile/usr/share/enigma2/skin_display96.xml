@@ -33,7 +33,7 @@
 <!-- main-->
 	<screen name="InfoBarSummary" position="fill">
 	
-		<widget source="session.CurrentService" render="PiconNobile" position="0,0" zPosition="1" size="220,132" alphatest="on">
+		<widget source="session.CurrentService" render="MyNobileRendererPicon" position="0,0" zPosition="1" size="220,132" alphatest="on">
 				<convert type="ServiceName">Reference</convert>
 			</widget>
 		<!-- widget source="session.Event_Now" render="Label" position="bottom" size="*,41" font="FdLcD;30" halign="left"  foregroundColor="#ffffff" -->
