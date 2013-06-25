@@ -3,5 +3,5 @@ Version: 0.1r0
 Description: MyNobile based on Skin Nobile MOD by Satinfo with BIG Picon
 Section: misc
 Priority: optional
-Architecture: mips32el
+Architecture: all
 Maintainer: Satinfo, arn354
