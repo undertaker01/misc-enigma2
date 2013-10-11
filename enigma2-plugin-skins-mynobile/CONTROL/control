@@ -1,7 +1,0 @@
-Package: enigma2-plugin-skins-mynobile
-Version: 0.1r0
-Description: MyNobile based on Skin Nobile MOD by Satinfo with BIG Picon
-Section: misc
-Priority: optional
-Architecture: all
-Maintainer: Satinfo, arn354

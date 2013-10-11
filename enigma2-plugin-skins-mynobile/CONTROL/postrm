@@ -1,9 +1,0 @@
-﻿#!/bin/sh
-TYPE=$(cat /proc/stb/info/gbmodel)
-MODEL=$(cat /proc/stb/info/model)
-echo "***************************************************************"
-echo "  Skin MyNobile by satinfo & arn354 successfully removed from  "
-echo "                      $MODEL $TYPE                             "
-echo "             System is going to reboot now...                  "
-echo "***************************************************************"
-reboot

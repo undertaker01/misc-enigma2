@@ -1,7 +1,0 @@
-#!/bin/sh
-rm -rf /usr/share/enigma2/skin_display96.xml
-TYPE=$(cat /proc/stb/info/gbmodel)
-MODEL=$(cat /proc/stb/info/model)
-echo "***************************************************************"
-echo "  Skin MyNobile by satinfo & arn354 will be installed on       "
-echo "                      $MODEL $TYPE                             "
